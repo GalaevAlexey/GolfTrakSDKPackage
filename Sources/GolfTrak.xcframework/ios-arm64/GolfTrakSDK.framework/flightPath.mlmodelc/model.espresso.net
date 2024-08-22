@@ -1,0 +1,2523 @@
+{
+  "layers" : [
+    {
+      "axis_h" : 0,
+      "axis_w" : 2,
+      "bottom" : "input_images",
+      "axis_k" : 1,
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "debug_info" : "transpose_154",
+      "top" : "transpose_154",
+      "type" : "transpose",
+      "name" : "transpose_154"
+    },
+    {
+      "bottom" : "transpose_154",
+      "end" : 448,
+      "start" : 0,
+      "weights" : {
+
+      },
+      "axis" : 2,
+      "debug_info" : "model_3\/lambda_22\/strided_slice",
+      "top" : "model_3\/lambda_22\/strided_slice",
+      "type" : "slice",
+      "name" : "model_3\/lambda_22\/strided_slice"
+    },
+    {
+      "bottom" : "transpose_154",
+      "end" : 896,
+      "start" : 448,
+      "weights" : {
+
+      },
+      "axis" : 2,
+      "debug_info" : "model_3\/lambda_23\/strided_slice",
+      "top" : "model_3\/lambda_23\/strided_slice",
+      "type" : "slice",
+      "name" : "model_3\/lambda_23\/strided_slice"
+    },
+    {
+      "bottom" : "transpose_154",
+      "end" : 1344,
+      "start" : 896,
+      "weights" : {
+
+      },
+      "axis" : 2,
+      "debug_info" : "model_3\/lambda_24\/strided_slice",
+      "top" : "model_3\/lambda_24\/strided_slice",
+      "type" : "slice",
+      "name" : "model_3\/lambda_24\/strided_slice"
+    },
+    {
+      "bottom" : "model_3\/lambda_22\/strided_slice",
+      "alpha" : 0.0039215688593685627,
+      "operation" : 1,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/rescaling_22\/mul",
+      "top" : "model_3\/rescaling_22\/mul",
+      "type" : "elementwise",
+      "name" : "model_3\/rescaling_22\/mul",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/lambda_23\/strided_slice",
+      "alpha" : 0.0039215688593685627,
+      "operation" : 1,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/rescaling_23\/mul",
+      "top" : "model_3\/rescaling_23\/mul",
+      "type" : "elementwise",
+      "name" : "model_3\/rescaling_23\/mul",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/lambda_24\/strided_slice",
+      "alpha" : 0.0039215688593685627,
+      "operation" : 1,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/rescaling_24\/mul",
+      "top" : "model_3\/rescaling_24\/mul",
+      "type" : "elementwise",
+      "name" : "model_3\/rescaling_24\/mul",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/rescaling_22\/mul,model_3\/rescaling_23\/mul,model_3\/rescaling_24\/mul",
+      "weights" : {
+
+      },
+      "nd_mode" : true,
+      "axis" : 3,
+      "debug_info" : "model_3\/concatenate_8\/concat",
+      "top" : "model_3\/concatenate_8\/concat",
+      "type" : "general_concat",
+      "name" : "model_3\/concatenate_8\/concat"
+    },
+    {
+      "axis_h" : 2,
+      "axis_w" : 1,
+      "bottom" : "model_3\/concatenate_8\/concat",
+      "axis_k" : 0,
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "debug_info" : "transpose_153",
+      "top" : "transpose_153",
+      "type" : "transpose",
+      "name" : "transpose_153"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_2\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_2\/FusedBatchNormV3_nchw",
+      "blob_weights" : 3,
+      "K" : 9,
+      "blob_biases" : 1,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_2\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "transpose_153",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation\/Relu",
+      "blob_weights" : 7,
+      "K" : 9,
+      "blob_biases" : 5,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "transpose_153",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_1\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_1\/FusedBatchNormV3_nchw",
+      "blob_weights" : 11,
+      "K" : 32,
+      "blob_biases" : 9,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_1\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "model_3\/AttentionResUNet\/activation\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_2\/FusedBatchNormV3_nchw,model_3\/AttentionResUNet\/batch_normalization_1\/FusedBatchNormV3_nchw",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add\/add",
+      "top" : "model_3\/AttentionResUNet\/add\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_1\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_1\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_1\/Relu"
+    },
+    {
+      "pad_r" : 0,
+      "debug_info" : "max_pool_0",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "size_x" : 2,
+      "top" : "max_pool_0",
+      "top_shape_style" : 0,
+      "stride_x" : 2,
+      "avg_or_max" : 1,
+      "average_count_exclude_padding" : 1,
+      "type" : "pool",
+      "name" : "max_pool_0",
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "bottom" : "model_3\/AttentionResUNet\/activation_1\/Relu",
+      "weights" : {
+
+      },
+      "pad_mode" : 2,
+      "size_y" : 2,
+      "pad_value" : 0
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_40\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_40\/BiasAdd",
+      "blob_weights" : 15,
+      "K" : 32,
+      "blob_biases" : 13,
+      "stride_x" : 2,
+      "name" : "model_3\/AttentionResUNet\/conv2d_40\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "model_3\/AttentionResUNet\/activation_1\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 2,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 2,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_5\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_5\/FusedBatchNormV3_nchw",
+      "blob_weights" : 19,
+      "K" : 32,
+      "blob_biases" : 17,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_5\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "max_pool_0",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_3\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_2\/Relu",
+      "blob_weights" : 23,
+      "K" : 32,
+      "blob_biases" : 21,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_3\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "max_pool_0",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_4\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_4\/FusedBatchNormV3_nchw",
+      "blob_weights" : 27,
+      "K" : 64,
+      "blob_biases" : 25,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_4\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "model_3\/AttentionResUNet\/activation_2\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_5\/FusedBatchNormV3_nchw,model_3\/AttentionResUNet\/batch_normalization_4\/FusedBatchNormV3_nchw",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_1\/add",
+      "top" : "model_3\/AttentionResUNet\/add_1\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_1\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_1\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_3\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_3\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_3\/Relu"
+    },
+    {
+      "pad_r" : 0,
+      "debug_info" : "max_pool_1",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "size_x" : 2,
+      "top" : "max_pool_1",
+      "top_shape_style" : 0,
+      "stride_x" : 2,
+      "avg_or_max" : 1,
+      "average_count_exclude_padding" : 1,
+      "type" : "pool",
+      "name" : "max_pool_1",
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "bottom" : "model_3\/AttentionResUNet\/activation_3\/Relu",
+      "weights" : {
+
+      },
+      "pad_mode" : 2,
+      "size_y" : 2,
+      "pad_value" : 0
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_32\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_32\/BiasAdd",
+      "blob_weights" : 31,
+      "K" : 64,
+      "blob_biases" : 29,
+      "stride_x" : 2,
+      "name" : "model_3\/AttentionResUNet\/conv2d_32\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "model_3\/AttentionResUNet\/activation_3\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 2,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 2,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_8\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_8\/FusedBatchNormV3_nchw",
+      "blob_weights" : 35,
+      "K" : 64,
+      "blob_biases" : 33,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_8\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "max_pool_1",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_6\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_4\/Relu",
+      "blob_weights" : 39,
+      "K" : 64,
+      "blob_biases" : 37,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_6\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "max_pool_1",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_7\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_7\/FusedBatchNormV3_nchw",
+      "blob_weights" : 43,
+      "K" : 128,
+      "blob_biases" : 41,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_7\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "model_3\/AttentionResUNet\/activation_4\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_8\/FusedBatchNormV3_nchw,model_3\/AttentionResUNet\/batch_normalization_7\/FusedBatchNormV3_nchw",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_2\/add",
+      "top" : "model_3\/AttentionResUNet\/add_2\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_2\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_2\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_5\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_5\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_5\/Relu"
+    },
+    {
+      "pad_r" : 0,
+      "debug_info" : "max_pool_2",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "size_x" : 2,
+      "top" : "max_pool_2",
+      "top_shape_style" : 0,
+      "stride_x" : 2,
+      "avg_or_max" : 1,
+      "average_count_exclude_padding" : 1,
+      "type" : "pool",
+      "name" : "max_pool_2",
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "bottom" : "model_3\/AttentionResUNet\/activation_5\/Relu",
+      "weights" : {
+
+      },
+      "pad_mode" : 2,
+      "size_y" : 2,
+      "pad_value" : 0
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_24\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_24\/BiasAdd",
+      "blob_weights" : 47,
+      "K" : 128,
+      "blob_biases" : 45,
+      "stride_x" : 2,
+      "name" : "model_3\/AttentionResUNet\/conv2d_24\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "model_3\/AttentionResUNet\/activation_5\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 2,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 2,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_11\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_11\/FusedBatchNormV3_nchw",
+      "blob_weights" : 51,
+      "K" : 128,
+      "blob_biases" : 49,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_11\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "max_pool_2",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_9\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_6\/Relu",
+      "blob_weights" : 55,
+      "K" : 128,
+      "blob_biases" : 53,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_9\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "max_pool_2",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_10\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_10\/FusedBatchNormV3_nchw",
+      "blob_weights" : 59,
+      "K" : 256,
+      "blob_biases" : 57,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_10\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "model_3\/AttentionResUNet\/activation_6\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_11\/FusedBatchNormV3_nchw,model_3\/AttentionResUNet\/batch_normalization_10\/FusedBatchNormV3_nchw",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_3\/add",
+      "top" : "model_3\/AttentionResUNet\/add_3\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_3\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_3\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_7\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_7\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_7\/Relu"
+    },
+    {
+      "pad_r" : 0,
+      "debug_info" : "max_pool_3",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "size_x" : 2,
+      "top" : "max_pool_3",
+      "top_shape_style" : 0,
+      "stride_x" : 2,
+      "avg_or_max" : 1,
+      "average_count_exclude_padding" : 1,
+      "type" : "pool",
+      "name" : "max_pool_3",
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "bottom" : "model_3\/AttentionResUNet\/activation_7\/Relu",
+      "weights" : {
+
+      },
+      "pad_mode" : 2,
+      "size_y" : 2,
+      "pad_value" : 0
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_16\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_16\/BiasAdd",
+      "blob_weights" : 63,
+      "K" : 256,
+      "blob_biases" : 61,
+      "stride_x" : 2,
+      "name" : "model_3\/AttentionResUNet\/conv2d_16\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "stride_y" : 2,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "model_3\/AttentionResUNet\/activation_7\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 2,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 2,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_14\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_14\/FusedBatchNormV3_nchw",
+      "blob_weights" : 67,
+      "K" : 256,
+      "blob_biases" : 65,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_14\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 512,
+      "bottom" : "max_pool_3",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_12\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_8\/Relu",
+      "blob_weights" : 71,
+      "K" : 256,
+      "blob_biases" : 69,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_12\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 512,
+      "bottom" : "max_pool_3",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_13\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_13\/FusedBatchNormV3_nchw",
+      "blob_weights" : 75,
+      "K" : 512,
+      "blob_biases" : 73,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_13\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 512,
+      "bottom" : "model_3\/AttentionResUNet\/activation_8\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_14\/FusedBatchNormV3_nchw,model_3\/AttentionResUNet\/batch_normalization_13\/FusedBatchNormV3_nchw",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_4\/add",
+      "top" : "model_3\/AttentionResUNet\/add_4\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_4\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_4\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_9\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_9\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_9\/Relu"
+    },
+    {
+      "top" : "model_3\/AttentionResUNet\/up_sampling2d_1\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "use_fractional_scale_factors" : false,
+      "weights" : {
+
+      },
+      "fractional_scaling_factor_y" : 1,
+      "type" : "upsample",
+      "scaling_factor_x" : 2,
+      "mode" : 0,
+      "align_corners" : 0,
+      "bottom" : "model_3\/AttentionResUNet\/activation_9\/Relu",
+      "debug_info" : "model_3\/AttentionResUNet\/up_sampling2d_1\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "fractional_scaling_factor_x" : 1,
+      "is_legacy_mode" : 1,
+      "name" : "model_3\/AttentionResUNet\/up_sampling2d_1\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "scaling_factor_y" : 2
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_15\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_10\/Relu",
+      "blob_weights" : 79,
+      "K" : 512,
+      "blob_biases" : 77,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_15\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "model_3\/AttentionResUNet\/activation_9\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_17\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_17\/BiasAdd",
+      "blob_weights" : 83,
+      "K" : 256,
+      "blob_biases" : 81,
+      "name" : "model_3\/AttentionResUNet\/conv2d_17\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "model_3\/AttentionResUNet\/activation_10\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_transpose\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_transpose\/BiasAdd",
+      "blob_weights" : 87,
+      "K" : 256,
+      "blob_biases" : 85,
+      "name" : "model_3\/AttentionResUNet\/conv2d_transpose\/BiasAdd",
+      "deconv_out_height" : 28,
+      "has_batch_norm" : 0,
+      "type" : "deconvolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_17\/BiasAdd",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "deconv_out_width" : 28,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_transpose\/BiasAdd,model_3\/AttentionResUNet\/conv2d_16\/BiasAdd",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_5\/add",
+      "top" : "model_3\/AttentionResUNet\/add_5\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_5\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_5\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_11\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_11\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_11\/Relu"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_18\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_18\/BiasAdd",
+      "blob_weights" : 91,
+      "K" : 256,
+      "blob_biases" : 89,
+      "name" : "model_3\/AttentionResUNet\/conv2d_18\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 1,
+      "bottom" : "model_3\/AttentionResUNet\/activation_11\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_18\/BiasAdd",
+      "weights" : {
+
+      },
+      "mode" : 3,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_12\/Sigmoid",
+      "top" : "model_3\/AttentionResUNet\/activation_12\/Sigmoid",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_12\/Sigmoid"
+    },
+    {
+      "top" : "model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "use_fractional_scale_factors" : false,
+      "weights" : {
+
+      },
+      "fractional_scaling_factor_y" : 1,
+      "type" : "upsample",
+      "scaling_factor_x" : 2,
+      "mode" : 0,
+      "align_corners" : 0,
+      "bottom" : "model_3\/AttentionResUNet\/activation_12\/Sigmoid",
+      "debug_info" : "model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "fractional_scaling_factor_x" : 1,
+      "is_legacy_mode" : 1,
+      "name" : "model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "scaling_factor_y" : 2
+    },
+    {
+      "weights" : {
+
+      },
+      "debug_info" : "model_3\/AttentionResUNet\/lambda\/concat",
+      "top" : "model_3\/AttentionResUNet\/lambda\/concat",
+      "type" : "concat",
+      "name" : "model_3\/AttentionResUNet\/lambda\/concat",
+      "bottom" : "model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d\/resize\/ResizeNearestNeighbor_channel_first_resize"
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/lambda\/concat,model_3\/AttentionResUNet\/activation_7\/Relu",
+      "alpha" : 1,
+      "operation" : 1,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/multiply\/mul",
+      "top" : "model_3\/AttentionResUNet\/multiply\/mul",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/multiply\/mul",
+      "beta" : 0
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_16\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_16\/FusedBatchNormV3_nchw",
+      "blob_weights" : 95,
+      "K" : 256,
+      "blob_biases" : 93,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_16\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "model_3\/AttentionResUNet\/multiply\/mul",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "weights" : {
+
+      },
+      "debug_info" : "model_3\/AttentionResUNet\/concatenate\/concat",
+      "top" : "model_3\/AttentionResUNet\/concatenate\/concat",
+      "type" : "concat",
+      "name" : "model_3\/AttentionResUNet\/concatenate\/concat",
+      "bottom" : "model_3\/AttentionResUNet\/up_sampling2d_1\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/batch_normalization_16\/FusedBatchNormV3_nchw"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_19\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_19\/FusedBatchNormV3_nchw",
+      "blob_weights" : 99,
+      "K" : 768,
+      "blob_biases" : 97,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_19\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "model_3\/AttentionResUNet\/concatenate\/concat",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_17\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_13\/Relu",
+      "blob_weights" : 103,
+      "K" : 768,
+      "blob_biases" : 101,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_17\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "model_3\/AttentionResUNet\/concatenate\/concat",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_18\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_18\/FusedBatchNormV3_nchw",
+      "blob_weights" : 107,
+      "K" : 256,
+      "blob_biases" : 105,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_18\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 256,
+      "bottom" : "model_3\/AttentionResUNet\/activation_13\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_19\/FusedBatchNormV3_nchw,model_3\/AttentionResUNet\/batch_normalization_18\/FusedBatchNormV3_nchw",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_6\/add",
+      "top" : "model_3\/AttentionResUNet\/add_6\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_6\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_6\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_14\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_14\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_14\/Relu"
+    },
+    {
+      "top" : "model_3\/AttentionResUNet\/up_sampling2d_3\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "use_fractional_scale_factors" : false,
+      "weights" : {
+
+      },
+      "fractional_scaling_factor_y" : 1,
+      "type" : "upsample",
+      "scaling_factor_x" : 2,
+      "mode" : 0,
+      "align_corners" : 0,
+      "bottom" : "model_3\/AttentionResUNet\/activation_14\/Relu",
+      "debug_info" : "model_3\/AttentionResUNet\/up_sampling2d_3\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "fractional_scaling_factor_x" : 1,
+      "is_legacy_mode" : 1,
+      "name" : "model_3\/AttentionResUNet\/up_sampling2d_3\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "scaling_factor_y" : 2
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_20\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_15\/Relu",
+      "blob_weights" : 111,
+      "K" : 256,
+      "blob_biases" : 109,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_20\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "model_3\/AttentionResUNet\/activation_14\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_25\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_25\/BiasAdd",
+      "blob_weights" : 115,
+      "K" : 128,
+      "blob_biases" : 113,
+      "name" : "model_3\/AttentionResUNet\/conv2d_25\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "model_3\/AttentionResUNet\/activation_15\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_transpose_1\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_transpose_1\/BiasAdd",
+      "blob_weights" : 119,
+      "K" : 128,
+      "blob_biases" : 117,
+      "name" : "model_3\/AttentionResUNet\/conv2d_transpose_1\/BiasAdd",
+      "deconv_out_height" : 56,
+      "has_batch_norm" : 0,
+      "type" : "deconvolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_25\/BiasAdd",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "deconv_out_width" : 56,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_transpose_1\/BiasAdd,model_3\/AttentionResUNet\/conv2d_24\/BiasAdd",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_7\/add",
+      "top" : "model_3\/AttentionResUNet\/add_7\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_7\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_7\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_16\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_16\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_16\/Relu"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_26\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_26\/BiasAdd",
+      "blob_weights" : 123,
+      "K" : 128,
+      "blob_biases" : 121,
+      "name" : "model_3\/AttentionResUNet\/conv2d_26\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 1,
+      "bottom" : "model_3\/AttentionResUNet\/activation_16\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_26\/BiasAdd",
+      "weights" : {
+
+      },
+      "mode" : 3,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_17\/Sigmoid",
+      "top" : "model_3\/AttentionResUNet\/activation_17\/Sigmoid",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_17\/Sigmoid"
+    },
+    {
+      "top" : "model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "use_fractional_scale_factors" : false,
+      "weights" : {
+
+      },
+      "fractional_scaling_factor_y" : 1,
+      "type" : "upsample",
+      "scaling_factor_x" : 2,
+      "mode" : 0,
+      "align_corners" : 0,
+      "bottom" : "model_3\/AttentionResUNet\/activation_17\/Sigmoid",
+      "debug_info" : "model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "fractional_scaling_factor_x" : 1,
+      "is_legacy_mode" : 1,
+      "name" : "model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "scaling_factor_y" : 2
+    },
+    {
+      "weights" : {
+
+      },
+      "debug_info" : "model_3\/AttentionResUNet\/lambda_1\/concat",
+      "top" : "model_3\/AttentionResUNet\/lambda_1\/concat",
+      "type" : "concat",
+      "name" : "model_3\/AttentionResUNet\/lambda_1\/concat",
+      "bottom" : "model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_2\/resize\/ResizeNearestNeighbor_channel_first_resize"
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/lambda_1\/concat,model_3\/AttentionResUNet\/activation_5\/Relu",
+      "alpha" : 1,
+      "operation" : 1,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/multiply_1\/mul",
+      "top" : "model_3\/AttentionResUNet\/multiply_1\/mul",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/multiply_1\/mul",
+      "beta" : 0
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_21\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_21\/FusedBatchNormV3_nchw",
+      "blob_weights" : 127,
+      "K" : 128,
+      "blob_biases" : 125,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_21\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "model_3\/AttentionResUNet\/multiply_1\/mul",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "weights" : {
+
+      },
+      "debug_info" : "model_3\/AttentionResUNet\/concatenate_1\/concat",
+      "top" : "model_3\/AttentionResUNet\/concatenate_1\/concat",
+      "type" : "concat",
+      "name" : "model_3\/AttentionResUNet\/concatenate_1\/concat",
+      "bottom" : "model_3\/AttentionResUNet\/up_sampling2d_3\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/batch_normalization_21\/FusedBatchNormV3_nchw"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_24\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_24\/FusedBatchNormV3_nchw",
+      "blob_weights" : 131,
+      "K" : 384,
+      "blob_biases" : 129,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_24\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "model_3\/AttentionResUNet\/concatenate_1\/concat",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_22\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_18\/Relu",
+      "blob_weights" : 135,
+      "K" : 384,
+      "blob_biases" : 133,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_22\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "model_3\/AttentionResUNet\/concatenate_1\/concat",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_23\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_23\/FusedBatchNormV3_nchw",
+      "blob_weights" : 139,
+      "K" : 128,
+      "blob_biases" : 137,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_23\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 128,
+      "bottom" : "model_3\/AttentionResUNet\/activation_18\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_24\/FusedBatchNormV3_nchw,model_3\/AttentionResUNet\/batch_normalization_23\/FusedBatchNormV3_nchw",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_8\/add",
+      "top" : "model_3\/AttentionResUNet\/add_8\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_8\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_8\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_19\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_19\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_19\/Relu"
+    },
+    {
+      "top" : "model_3\/AttentionResUNet\/up_sampling2d_5\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "use_fractional_scale_factors" : false,
+      "weights" : {
+
+      },
+      "fractional_scaling_factor_y" : 1,
+      "type" : "upsample",
+      "scaling_factor_x" : 2,
+      "mode" : 0,
+      "align_corners" : 0,
+      "bottom" : "model_3\/AttentionResUNet\/activation_19\/Relu",
+      "debug_info" : "model_3\/AttentionResUNet\/up_sampling2d_5\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "fractional_scaling_factor_x" : 1,
+      "is_legacy_mode" : 1,
+      "name" : "model_3\/AttentionResUNet\/up_sampling2d_5\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "scaling_factor_y" : 2
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_25\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_20\/Relu",
+      "blob_weights" : 143,
+      "K" : 128,
+      "blob_biases" : 141,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_25\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "model_3\/AttentionResUNet\/activation_19\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_33\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_33\/BiasAdd",
+      "blob_weights" : 147,
+      "K" : 64,
+      "blob_biases" : 145,
+      "name" : "model_3\/AttentionResUNet\/conv2d_33\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "model_3\/AttentionResUNet\/activation_20\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_transpose_2\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_transpose_2\/BiasAdd",
+      "blob_weights" : 151,
+      "K" : 64,
+      "blob_biases" : 149,
+      "name" : "model_3\/AttentionResUNet\/conv2d_transpose_2\/BiasAdd",
+      "deconv_out_height" : 112,
+      "has_batch_norm" : 0,
+      "type" : "deconvolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_33\/BiasAdd",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "deconv_out_width" : 112,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_transpose_2\/BiasAdd,model_3\/AttentionResUNet\/conv2d_32\/BiasAdd",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_9\/add",
+      "top" : "model_3\/AttentionResUNet\/add_9\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_9\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_9\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_21\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_21\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_21\/Relu"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_34\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_34\/BiasAdd",
+      "blob_weights" : 155,
+      "K" : 64,
+      "blob_biases" : 153,
+      "name" : "model_3\/AttentionResUNet\/conv2d_34\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 1,
+      "bottom" : "model_3\/AttentionResUNet\/activation_21\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_34\/BiasAdd",
+      "weights" : {
+
+      },
+      "mode" : 3,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_22\/Sigmoid",
+      "top" : "model_3\/AttentionResUNet\/activation_22\/Sigmoid",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_22\/Sigmoid"
+    },
+    {
+      "top" : "model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "use_fractional_scale_factors" : false,
+      "weights" : {
+
+      },
+      "fractional_scaling_factor_y" : 1,
+      "type" : "upsample",
+      "scaling_factor_x" : 2,
+      "mode" : 0,
+      "align_corners" : 0,
+      "bottom" : "model_3\/AttentionResUNet\/activation_22\/Sigmoid",
+      "debug_info" : "model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "fractional_scaling_factor_x" : 1,
+      "is_legacy_mode" : 1,
+      "name" : "model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "scaling_factor_y" : 2
+    },
+    {
+      "weights" : {
+
+      },
+      "debug_info" : "model_3\/AttentionResUNet\/lambda_2\/concat",
+      "top" : "model_3\/AttentionResUNet\/lambda_2\/concat",
+      "type" : "concat",
+      "name" : "model_3\/AttentionResUNet\/lambda_2\/concat",
+      "bottom" : "model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_4\/resize\/ResizeNearestNeighbor_channel_first_resize"
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/lambda_2\/concat,model_3\/AttentionResUNet\/activation_3\/Relu",
+      "alpha" : 1,
+      "operation" : 1,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/multiply_2\/mul",
+      "top" : "model_3\/AttentionResUNet\/multiply_2\/mul",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/multiply_2\/mul",
+      "beta" : 0
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_26\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_26\/FusedBatchNormV3_nchw",
+      "blob_weights" : 159,
+      "K" : 64,
+      "blob_biases" : 157,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_26\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "model_3\/AttentionResUNet\/multiply_2\/mul",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "weights" : {
+
+      },
+      "debug_info" : "model_3\/AttentionResUNet\/concatenate_2\/concat",
+      "top" : "model_3\/AttentionResUNet\/concatenate_2\/concat",
+      "type" : "concat",
+      "name" : "model_3\/AttentionResUNet\/concatenate_2\/concat",
+      "bottom" : "model_3\/AttentionResUNet\/up_sampling2d_5\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/batch_normalization_26\/FusedBatchNormV3_nchw"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_29\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_29\/FusedBatchNormV3_nchw",
+      "blob_weights" : 163,
+      "K" : 192,
+      "blob_biases" : 161,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_29\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "model_3\/AttentionResUNet\/concatenate_2\/concat",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_27\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_23\/Relu",
+      "blob_weights" : 167,
+      "K" : 192,
+      "blob_biases" : 165,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_27\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "model_3\/AttentionResUNet\/concatenate_2\/concat",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_28\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_28\/FusedBatchNormV3_nchw",
+      "blob_weights" : 171,
+      "K" : 64,
+      "blob_biases" : 169,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_28\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 64,
+      "bottom" : "model_3\/AttentionResUNet\/activation_23\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_29\/FusedBatchNormV3_nchw,model_3\/AttentionResUNet\/batch_normalization_28\/FusedBatchNormV3_nchw",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_10\/add",
+      "top" : "model_3\/AttentionResUNet\/add_10\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_10\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_10\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_24\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_24\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_24\/Relu"
+    },
+    {
+      "top" : "model_3\/AttentionResUNet\/up_sampling2d_7\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "use_fractional_scale_factors" : false,
+      "weights" : {
+
+      },
+      "fractional_scaling_factor_y" : 1,
+      "type" : "upsample",
+      "scaling_factor_x" : 2,
+      "mode" : 0,
+      "align_corners" : 0,
+      "bottom" : "model_3\/AttentionResUNet\/activation_24\/Relu",
+      "debug_info" : "model_3\/AttentionResUNet\/up_sampling2d_7\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "fractional_scaling_factor_x" : 1,
+      "is_legacy_mode" : 1,
+      "name" : "model_3\/AttentionResUNet\/up_sampling2d_7\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "scaling_factor_y" : 2
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_30\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_25\/Relu",
+      "blob_weights" : 175,
+      "K" : 64,
+      "blob_biases" : 173,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_30\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "model_3\/AttentionResUNet\/activation_24\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_41\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_41\/BiasAdd",
+      "blob_weights" : 179,
+      "K" : 32,
+      "blob_biases" : 177,
+      "name" : "model_3\/AttentionResUNet\/conv2d_41\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "model_3\/AttentionResUNet\/activation_25\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_transpose_3\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_transpose_3\/BiasAdd",
+      "blob_weights" : 183,
+      "K" : 32,
+      "blob_biases" : 181,
+      "name" : "model_3\/AttentionResUNet\/conv2d_transpose_3\/BiasAdd",
+      "deconv_out_height" : 224,
+      "has_batch_norm" : 0,
+      "type" : "deconvolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_41\/BiasAdd",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "deconv_out_width" : 224,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_transpose_3\/BiasAdd,model_3\/AttentionResUNet\/conv2d_40\/BiasAdd",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_11\/add",
+      "top" : "model_3\/AttentionResUNet\/add_11\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_11\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_11\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_26\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_26\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_26\/Relu"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/conv2d_42\/BiasAdd",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/conv2d_42\/BiasAdd",
+      "blob_weights" : 187,
+      "K" : 32,
+      "blob_biases" : 185,
+      "name" : "model_3\/AttentionResUNet\/conv2d_42\/BiasAdd",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 1,
+      "bottom" : "model_3\/AttentionResUNet\/activation_26\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/conv2d_42\/BiasAdd",
+      "weights" : {
+
+      },
+      "mode" : 3,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_27\/Sigmoid",
+      "top" : "model_3\/AttentionResUNet\/activation_27\/Sigmoid",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_27\/Sigmoid"
+    },
+    {
+      "top" : "model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "use_fractional_scale_factors" : false,
+      "weights" : {
+
+      },
+      "fractional_scaling_factor_y" : 1,
+      "type" : "upsample",
+      "scaling_factor_x" : 2,
+      "mode" : 0,
+      "align_corners" : 0,
+      "bottom" : "model_3\/AttentionResUNet\/activation_27\/Sigmoid",
+      "debug_info" : "model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "fractional_scaling_factor_x" : 1,
+      "is_legacy_mode" : 1,
+      "name" : "model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize",
+      "scaling_factor_y" : 2
+    },
+    {
+      "weights" : {
+
+      },
+      "debug_info" : "model_3\/AttentionResUNet\/lambda_3\/concat",
+      "top" : "model_3\/AttentionResUNet\/lambda_3\/concat",
+      "type" : "concat",
+      "name" : "model_3\/AttentionResUNet\/lambda_3\/concat",
+      "bottom" : "model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/up_sampling2d_6\/resize\/ResizeNearestNeighbor_channel_first_resize"
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/lambda_3\/concat,model_3\/AttentionResUNet\/activation_1\/Relu",
+      "alpha" : 1,
+      "operation" : 1,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/multiply_3\/mul",
+      "top" : "model_3\/AttentionResUNet\/multiply_3\/mul",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/multiply_3\/mul",
+      "beta" : 0
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_31\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_31\/FusedBatchNormV3_nchw",
+      "blob_weights" : 191,
+      "K" : 32,
+      "blob_biases" : 189,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_31\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "model_3\/AttentionResUNet\/multiply_3\/mul",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "weights" : {
+
+      },
+      "debug_info" : "model_3\/AttentionResUNet\/concatenate_3\/concat",
+      "top" : "model_3\/AttentionResUNet\/concatenate_3\/concat",
+      "type" : "concat",
+      "name" : "model_3\/AttentionResUNet\/concatenate_3\/concat",
+      "bottom" : "model_3\/AttentionResUNet\/up_sampling2d_7\/resize\/ResizeNearestNeighbor_channel_first_resize,model_3\/AttentionResUNet\/batch_normalization_31\/FusedBatchNormV3_nchw"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_34\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_34\/FusedBatchNormV3_nchw",
+      "blob_weights" : 195,
+      "K" : 96,
+      "blob_biases" : 193,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_34\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "model_3\/AttentionResUNet\/concatenate_3\/concat",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 1,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_32\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/activation_28\/Relu",
+      "blob_weights" : 199,
+      "K" : 96,
+      "blob_biases" : 197,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_32\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "model_3\/AttentionResUNet\/concatenate_3\/concat",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_33\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_33\/FusedBatchNormV3_nchw",
+      "blob_weights" : 203,
+      "K" : 32,
+      "blob_biases" : 201,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_33\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 32,
+      "bottom" : "model_3\/AttentionResUNet\/activation_28\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 3,
+      "pad_mode" : 1,
+      "pad_value" : 0,
+      "Ny" : 3,
+      "n_parallel" : 1
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_34\/FusedBatchNormV3_nchw,model_3\/AttentionResUNet\/batch_normalization_33\/FusedBatchNormV3_nchw",
+      "alpha" : 1,
+      "operation" : 0,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/add_12\/add",
+      "top" : "model_3\/AttentionResUNet\/add_12\/add",
+      "type" : "elementwise",
+      "name" : "model_3\/AttentionResUNet\/add_12\/add",
+      "beta" : 0
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/add_12\/add",
+      "weights" : {
+
+      },
+      "mode" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_29\/Relu",
+      "top" : "model_3\/AttentionResUNet\/activation_29\/Relu",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_29\/Relu"
+    },
+    {
+      "pad_r" : 0,
+      "fused_relu" : 0,
+      "fused_tanh" : 0,
+      "debug_info" : "model_3\/AttentionResUNet\/batch_normalization_35\/FusedBatchNormV3_nchw",
+      "pad_fill_mode" : 0,
+      "pad_b" : 0,
+      "pad_l" : 0,
+      "top" : "model_3\/AttentionResUNet\/batch_normalization_35\/FusedBatchNormV3_nchw",
+      "blob_weights" : 207,
+      "K" : 32,
+      "blob_biases" : 205,
+      "name" : "model_3\/AttentionResUNet\/batch_normalization_35\/FusedBatchNormV3_nchw",
+      "has_batch_norm" : 0,
+      "type" : "convolution",
+      "n_groups" : 1,
+      "pad_t" : 0,
+      "has_biases" : 1,
+      "C" : 3,
+      "bottom" : "model_3\/AttentionResUNet\/activation_29\/Relu",
+      "weights" : {
+
+      },
+      "Nx" : 1,
+      "pad_mode" : 0,
+      "pad_value" : 0,
+      "Ny" : 1,
+      "n_parallel" : 1
+    },
+    {
+      "axis_h" : 0,
+      "axis_w" : 2,
+      "bottom" : "model_3\/AttentionResUNet\/batch_normalization_35\/FusedBatchNormV3_nchw",
+      "axis_k" : 1,
+      "axis_n" : 3,
+      "axis_seq" : 4,
+      "weights" : {
+
+      },
+      "debug_info" : "transpose_152",
+      "top" : "transpose_152",
+      "type" : "transpose",
+      "name" : "transpose_152"
+    },
+    {
+      "bottom" : "transpose_152",
+      "weights" : {
+
+      },
+      "mode" : 3,
+      "debug_info" : "model_3\/AttentionResUNet\/activation_30\/Sigmoid",
+      "top" : "model_3\/AttentionResUNet\/activation_30\/Sigmoid",
+      "type" : "activation",
+      "name" : "model_3\/AttentionResUNet\/activation_30\/Sigmoid"
+    },
+    {
+      "bottom" : "",
+      "k" : 1,
+      "n" : 1,
+      "weights" : {
+
+      },
+      "h" : 1,
+      "debug_info" : "model_3\/max_layer_4\/Greater",
+      "constant_blob" : 209,
+      "top" : "model_3\/max_layer_4\/Greater_load_constant_131",
+      "w" : 1,
+      "type" : "load_constant",
+      "name" : "model_3\/max_layer_4\/Greater_load_constant_131"
+    },
+    {
+      "bottom" : "model_3\/AttentionResUNet\/activation_30\/Sigmoid,model_3\/max_layer_4\/Greater_load_constant_131",
+      "alpha" : 1,
+      "operation" : 105,
+      "weights" : {
+
+      },
+      "fused_relu" : 0,
+      "debug_info" : "model_3\/max_layer_4\/Greater",
+      "top" : "model_3\/max_layer_4\/Greater",
+      "type" : "elementwise",
+      "name" : "model_3\/max_layer_4\/Greater",
+      "beta" : 0
+    },
+    {
+      "top" : "model_3\/max_layer_4\/SelectV2\/t",
+      "w" : 1,
+      "h" : 1,
+      "name" : "model_3\/max_layer_4\/SelectV2\/t",
+      "nd_rank" : 1,
+      "type" : "load_constant",
+      "k" : 1,
+      "bottom" : "",
+      "debug_info" : "model_3\/max_layer_4\/SelectV2\/t",
+      "n" : 1,
+      "weights" : {
+
+      },
+      "constant_blob" : 211
+    },
+    {
+      "top" : "model_3\/max_layer_4\/SelectV2\/e",
+      "w" : 1,
+      "h" : 1,
+      "name" : "model_3\/max_layer_4\/SelectV2\/e",
+      "nd_rank" : 1,
+      "type" : "load_constant",
+      "k" : 1,
+      "bottom" : "",
+      "debug_info" : "model_3\/max_layer_4\/SelectV2\/e",
+      "n" : 1,
+      "weights" : {
+
+      },
+      "constant_blob" : 213
+    },
+    {
+      "name" : "model_3\/max_layer_4\/SelectV2",
+      "fused_relu" : 0,
+      "beta" : 0,
+      "operation" : 101,
+      "type" : "elementwise",
+      "alpha" : 1,
+      "attributes" : {
+        "is_output" : 1
+      },
+      "bottom" : "model_3\/max_layer_4\/Greater,model_3\/max_layer_4\/SelectV2\/t,model_3\/max_layer_4\/SelectV2\/e",
+      "debug_info" : "model_3\/max_layer_4\/SelectV2",
+      "nd_mode" : true,
+      "weights" : {
+
+      },
+      "top" : "Identity"
+    }
+  ],
+  "transform_params" : {
+    "input_images" : {
+      "bias_a" : 0,
+      "bias_g" : 0,
+      "bias_r" : 0,
+      "bias_b" : 0,
+      "center_mean" : 0,
+      "is_network_bgr" : 0,
+      "scale" : 1
+    }
+  },
+  "storage" : "model.espresso.weights",
+  "metadata_in_weights" : [
+
+  ],
+  "properties" : {
+
+  },
+  "analyses" : {
+
+  },
+  "format_version" : 200
+}

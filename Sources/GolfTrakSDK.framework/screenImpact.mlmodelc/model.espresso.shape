@@ -1,0 +1,1403 @@
+{
+  "layer_shapes" : {
+    "model_3\/model_1\/model\/conv2_block2_1_relu\/Relu" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/lambda_7\/strided_slice" : {
+      "k" : 448,
+      "w" : 3,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/sequential\/re_lu_3\/Relu" : {
+      "k" : 32,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block4_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block1_2_relu\/Relu_1" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential_1\/batch_normalization_7\/FusedBatchNormV3_nchw" : {
+      "k" : 1,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block2_1_relu\/Relu_1" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block2_out\/Relu_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block1_out\/Relu_1" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block3_add\/add" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential_1\/up_sampling2d_1\/resize\/ResizeBilinear_channel_first_upsample_bilinear" : {
+      "k" : 1,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv3_block1_out\/Relu" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential_1\/batch_normalization_11\/FusedBatchNormV3_nchw" : {
+      "k" : 64,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block1_out\/Relu_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block2_1_relu\/Relu" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential\/batch_normalization_1\/FusedBatchNormV3_nchw" : {
+      "k" : 1,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv2_block3_2_relu\/Relu" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block2_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential_2\/re_lu_13\/Relu" : {
+      "k" : 32,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block2_2_relu\/Relu_1" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/sequential_1\/re_lu_9\/Relu" : {
+      "k" : 64,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block6_1_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv1_relu\/Relu" : {
+      "k" : 64,
+      "w" : 224,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 224
+    },
+    "input_images" : {
+      "k" : 3,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 896
+    },
+    "model_3\/model_1\/model\/conv4_block6_2_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block1_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block1_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "max_pool_1" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block6_out\/Relu_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/tf.__operators__.add\/AddV2" : {
+      "k" : 1,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv4_block3_add\/add" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential\/re_lu_2\/Relu" : {
+      "k" : 16,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block2_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block3_2_relu\/Relu" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential\/batch_normalization_4\/FusedBatchNormV3_nchw" : {
+      "k" : 32,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/sequential_2\/re_lu_10\/Relu" : {
+      "k" : 1,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block3_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/activation\/Sigmoid" : {
+      "k" : 1,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv3_block3_1_relu\/Relu" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block1_add\/add_1" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block4_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block4_add\/add" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block5_out\/Relu_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block2_2_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block3_1_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/max_layer_3\/Greater_load_constant_268" : {
+      "k" : 1,
+      "w" : 1,
+      "n" : 1,
+      "h" : 1
+    },
+    "model_3\/model_1\/model\/conv4_block4_1_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block5_out\/Relu" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block4_2_relu\/Relu" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv2_block1_0_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "transpose_322" : {
+      "k" : 3,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/sequential_1\/batch_normalization_8\/FusedBatchNormV3_nchw" : {
+      "k" : 16,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block4_1_relu\/Relu" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/max_layer_3\/Greater" : {
+      "k" : 1,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 3,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv2_block1_out\/Relu" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/sequential\/re_lu_1\/Relu" : {
+      "k" : 16,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/sequential\/conv2d_transpose_4\/BiasAdd" : {
+      "k" : 1,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv2_block1_2_relu\/Relu" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block3_2_relu\/Relu_1" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block6_out\/Relu" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block2_out\/Relu" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_2\/batch_normalization_15\/FusedBatchNormV3_nchw" : {
+      "k" : 16,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/rescaling_6\/mul" : {
+      "k" : 448,
+      "w" : 3,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/sequential\/batch_normalization_2\/FusedBatchNormV3_nchw" : {
+      "k" : 16,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block4_1_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block5_add\/add_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block1_0_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block2_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block3_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block3_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block1_2_relu\/Relu" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block3_out\/Relu" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block4_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block1_add\/add_1" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block1_add\/add_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block2_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block1_1_relu\/Relu" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential_1\/batch_normalization_10\/FusedBatchNormV3_nchw" : {
+      "k" : 32,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block5_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block6_add\/add_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/max_layer_3\/SelectV2\/t" : {
+      "k" : 1,
+      "w" : 1,
+      "n" : 1,
+      "_rank" : 1,
+      "h" : 1
+    },
+    "model_3\/model_1\/sequential\/batch_normalization_5\/FusedBatchNormV3_nchw" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block5_2_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block1_1_relu\/Relu_1" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv2_block1_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block5_1_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_2\/conv2d_transpose_14\/BiasAdd" : {
+      "k" : 1,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block2_add\/add_1" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "Identity" : {
+      "k" : 1,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 3,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv4_block3_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_1\/batch_normalization_6\/FusedBatchNormV3_nchw" : {
+      "k" : 1024,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block2_2_relu\/Relu" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block1_1_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block4_add\/add" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential_2\/re_lu_12\/Relu" : {
+      "k" : 16,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "max_pool_0" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block2_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "transpose_320" : {
+      "k" : 448,
+      "w" : 1,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv2_block3_add\/add_1" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block6_2_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block1_2_relu\/Relu_1" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block4_2_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block2_1_relu\/Relu_1" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block1_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block5_2_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block3_1_relu\/Relu_1" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/max_layer_3\/SelectV2\/e" : {
+      "k" : 1,
+      "w" : 1,
+      "n" : 1,
+      "_rank" : 1,
+      "h" : 1
+    },
+    "model_3\/model_1\/model\/conv4_block6_1_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block1_add\/add" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block2_out\/Relu" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block2_2_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block2_1_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block2_add\/add" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/sequential\/re_lu\/Relu" : {
+      "k" : 1,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block3_out\/Relu" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential_2\/batch_normalization_12\/FusedBatchNormV3_nchw" : {
+      "k" : 2048,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block1_2_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block5_add\/add" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block2_1_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block3_2_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block1_0_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential_2\/batch_normalization_14\/FusedBatchNormV3_nchw" : {
+      "k" : 16,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block2_add\/add_1" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block1_add\/add" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block3_1_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block2_add\/add" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "transpose_323" : {
+      "k" : 896,
+      "w" : 3,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/sequential_1\/re_lu_5\/Relu" : {
+      "k" : 1,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block3_add\/add_1" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block2_2_relu\/Relu_1" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block3_1_relu\/Relu_1" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block4_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block4_1_relu\/Relu_1" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block4_2_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_2\/batch_normalization_17\/FusedBatchNormV3_nchw" : {
+      "k" : 64,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/concatenate\/concat" : {
+      "k" : 512,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv2_block2_out\/Relu" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block3_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block4_add\/add_1" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block1_add\/add" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block3_1_relu\/Relu" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block2_add\/add" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block3_2_relu\/Relu_1" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/sequential_1\/re_lu_6\/Relu" : {
+      "k" : 16,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv2_block3_out\/Relu" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block1_0_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block6_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_2\/re_lu_14\/Relu" : {
+      "k" : 64,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/tf.__operators__.add_1\/AddV2" : {
+      "k" : 1,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/concatenate_1\/concat" : {
+      "k" : 1024,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block2_add\/add_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_2\/re_lu_11\/Relu" : {
+      "k" : 16,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block4_out\/Relu" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block1_2_relu\/Relu" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_1\/batch_normalization_9\/FusedBatchNormV3_nchw" : {
+      "k" : 16,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential\/up_sampling2d\/resize\/ResizeBilinear_channel_first_upsample_bilinear" : {
+      "k" : 1,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv4_block3_2_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block1_1_relu\/Relu_1" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block4_out\/Relu_1" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "transpose_321" : {
+      "k" : 3,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv4_block3_add\/add_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/rescaling_7\/mul" : {
+      "k" : 448,
+      "w" : 3,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv2_block3_out\/Relu_1" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block1_out\/Relu" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block5_1_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_1\/re_lu_7\/Relu" : {
+      "k" : 16,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block4_out\/Relu_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential\/re_lu_4\/Relu" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block4_add\/add_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv3_block3_out\/Relu_1" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/sequential_2\/batch_normalization_13\/FusedBatchNormV3_nchw" : {
+      "k" : 1,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_1\/conv2d_transpose_9\/BiasAdd" : {
+      "k" : 1,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv2_block2_out\/Relu_1" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/sequential_2\/up_sampling2d_2\/resize\/ResizeBilinear_channel_first_upsample_bilinear" : {
+      "k" : 1,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/sequential\/batch_normalization_3\/FusedBatchNormV3_nchw" : {
+      "k" : 16,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block4_2_relu\/Relu_1" : {
+      "k" : 128,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv2_block1_1_relu\/Relu" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv2_block3_add\/add" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block1_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block1_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block1_0_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block1_0_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block3_out\/Relu_1" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/lambda_6\/strided_slice" : {
+      "k" : 448,
+      "w" : 3,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 448
+    },
+    "model_3\/model_1\/sequential\/batch_normalization\/FusedBatchNormV3_nchw" : {
+      "k" : 512,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv2_block2_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv3_block2_out\/Relu_1" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv4_block1_1_relu\/Relu_1" : {
+      "k" : 256,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv4_block6_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/model\/conv2_block1_out\/Relu_1" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv2_block3_3_bn\/FusedBatchNormV3_1_nchw" : {
+      "k" : 256,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv1_relu\/Relu_1" : {
+      "k" : 64,
+      "w" : 224,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 224
+    },
+    "model_3\/squeeze_last_dim_3\/Squeeze" : {
+      "k" : 1,
+      "w" : 448,
+      "n" : 1,
+      "_rank" : 3,
+      "h" : 448
+    },
+    "model_3\/model_1\/model\/conv4_block6_add\/add" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_1\/re_lu_8\/Relu" : {
+      "k" : 32,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv3_block4_out\/Relu" : {
+      "k" : 512,
+      "w" : 56,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 56
+    },
+    "model_3\/model_1\/model\/conv2_block2_2_relu\/Relu" : {
+      "k" : 64,
+      "w" : 112,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 112
+    },
+    "model_3\/model_1\/model\/conv4_block5_3_bn\/FusedBatchNormV3_nchw" : {
+      "k" : 1024,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/sequential_2\/batch_normalization_16\/FusedBatchNormV3_nchw" : {
+      "k" : 32,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    },
+    "model_3\/model_1\/concatenate_2\/concat" : {
+      "k" : 2048,
+      "w" : 28,
+      "n" : 1,
+      "_rank" : 4,
+      "h" : 28
+    }
+  }
+}

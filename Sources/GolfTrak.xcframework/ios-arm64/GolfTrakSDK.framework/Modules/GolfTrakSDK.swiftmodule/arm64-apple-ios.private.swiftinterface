@@ -1,0 +1,793 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios17.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name GolfTrakSDK
+import ARKit
+import AVFoundation
+import AVKit
+import Accelerate
+import Alamofire
+import AudioToolbox
+import CocoaLumberjack
+import CocoaLumberjackSwift
+import CoreAudio
+import CoreGraphics
+import CoreImage
+import CoreLocation
+import CoreML
+import CoreMotion
+import CoreVideo
+import CryptoKit
+import DeveloperToolsSupport
+import DeviceKit
+import EzPopup
+import Foundation
+@_exported import GolfTrakSDK
+import KeychainSwift
+import MBProgressHUD
+import MachO
+import MessageUI
+import Metal
+import MetalKit
+import QuartzCore
+import Reachability
+import RealityKit
+import SnapKit
+import Starscream
+import Swift
+import SwiftUI
+import UIKit
+import VideoToolbox
+import Vision
+import Wrap
+import ZipArchive
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public enum StreamObjectType : Swift.String {
+  case event
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension UIKit.UIImage {
+  convenience public init?(pixelBuffer: CoreVideo.CVPixelBuffer)
+}
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) public var rootViewController: UIKit.UIViewController {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func pushViewController(_ viewController: UIKit.UIViewController, animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public func setViewControllers(_ viewControllers: [UIKit.UIViewController], animated: Swift.Bool, completion: (() -> Swift.Void)?)
+  @_Concurrency.MainActor(unsafe) public func clear()
+}
+extension UIKit.UICollectionView {
+  @_Concurrency.MainActor(unsafe) public var currentPageNumber: Swift.Int {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public func register(_ type: UIKit.UICollectionViewCell.Type)
+  @_Concurrency.MainActor(unsafe) public func dequeueReusableCell<T>(_ type: T.Type, indexPath: Foundation.IndexPath) -> T?
+}
+public typealias RPCStreamMethod = Swift.String
+public typealias PRCStreamParameters = [Swift.String : Any]
+public typealias RPCStreamCompletion = ((Swift.Result<Any, GolfTrakSDK.APIError>) -> ())
+public protocol ISocketRPCStreamListener {
+  func receiveIfCan(_ id: Swift.String, method: Swift.String, parameters: [Swift.String : Any]?)
+}
+public protocol IStreamEvent {
+  var type: GolfTrakSDK.StreamEventType { get }
+  var data: Any? { get }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var borderColor: UIKit.UIColor? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var borderWidth: CoreFoundation.CGFloat {
+    get
+    set
+  }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func shake(duration: CoreFoundation.CFTimeInterval = 0.5)
+}
+public class FPSCounter {
+  public init()
+  public func frameCompleted()
+  @objc deinit
+}
+public enum StreamEventMethod : Swift.String {
+  case userTyping
+  case delivered
+  case read
+  case create
+  case update
+  case delete
+  case batchDelete
+  case changeType
+  case patch
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public typealias ReachabilityStatus = Alamofire.NetworkReachabilityManager.NetworkReachabilityStatus
+@_hasMissingDesignatedInitializers final public class ReachabilityObserver {
+  @objc deinit
+  final public func startListening()
+  final public func stopListening()
+}
+@_hasMissingDesignatedInitializers public class SimulatorConnectService {
+  @objc deinit
+}
+public protocol IKeychainService : AnyObject {
+  func add(value: Swift.String, key: GolfTrakSDK.KeychainKey) -> Swift.Bool
+  func add(bool: Swift.Bool, key: GolfTrakSDK.KeychainKey) -> Swift.Bool
+  func value(key: GolfTrakSDK.KeychainKey) -> Swift.String?
+  func remove(key: GolfTrakSDK.KeychainKey) -> Swift.Bool
+  func clearAll()
+}
+public protocol IReachabilityService {
+  var isReachable: Swift.Bool { get }
+  func add(listener: any GolfTrakSDK.IReachabilityServiceListener)
+  func remove(listener: any GolfTrakSDK.IReachabilityServiceListener)
+}
+public struct Credentials : Swift.Decodable {
+  public let accessToken: Swift.String
+  public let message: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension Foundation.NSMutableAttributedString {
+  public static func += (left: Foundation.NSMutableAttributedString, right: Swift.String) -> Foundation.NSMutableAttributedString
+  public static func += (left: Foundation.NSMutableAttributedString, right: Foundation.NSAttributedString) -> Foundation.NSMutableAttributedString
+}
+extension Foundation.NSAttributedString {
+  public static func + (left: Foundation.NSAttributedString, right: Foundation.NSAttributedString) -> Foundation.NSAttributedString
+  public static func + (left: Foundation.NSAttributedString, right: Swift.String) -> Foundation.NSAttributedString
+  public static func + (left: Swift.String, right: Foundation.NSAttributedString) -> Foundation.NSAttributedString
+}
+public enum SocketServiceState {
+  case connected
+  case connecting
+  case disconnected
+  case disconnecting
+  public static func == (a: GolfTrakSDK.SocketServiceState, b: GolfTrakSDK.SocketServiceState) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension GolfTrakSDK.SocketServiceState {
+  public func isActiveConnection() -> Swift.Bool
+}
+public protocol ISocketServiceListener : AnyObject {
+  func socketServiceDidChangeState(state: GolfTrakSDK.SocketServiceState)
+  func socketServiceTryingWriteWhileDisconnect()
+  func socketServiceUnauthorized()
+}
+public enum UserstoryType : Swift.String {
+  case home
+  case extras
+  case support
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum APIError : Swift.Error {
+  case requestTimeoutError
+  case requestError
+  case reconnectSuggested
+  case serializationError
+  case serverError(message: Swift.String? = "Unknown Error", code: Swift.Int? = -1)
+  case networkError
+}
+public class ReachabilityService : GolfTrakSDK.IReachabilityService {
+  public var isReachable: Swift.Bool {
+    get
+  }
+  public init()
+  @objc deinit
+  public func add(listener: any GolfTrakSDK.IReachabilityServiceListener)
+  public func remove(listener: any GolfTrakSDK.IReachabilityServiceListener)
+}
+@_hasMissingDesignatedInitializers public class Networking {
+  final public let sessionManager: Alamofire.Session
+  final public let uploadsManager: Alamofire.Session
+  final public let mlDataUploadsManager: Alamofire.Session
+  @objc deinit
+}
+public struct StreamObject : GolfTrakSDK.IStreamObject {
+  public let version: Swift.String
+  public let body: Any?
+}
+public enum KeychainKey : Swift.String {
+  case currentUser
+  case credentials
+  case firstLaunch
+  case accessToken
+  case accessMessage
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol ILaunchMonitorView : AnyObject {
+  var videoView: any GolfTrakSDK.IGTVideoRectView { get }
+  var backButton: UIKit.UIButton { get }
+  var settingsButton: UIKit.UIButton { get }
+  func setupSimulatorIndicator()
+  func showReadyForShot()
+  func updateSimLabel(with text: Swift.String)
+  func updateSimIndicator(is connected: Swift.Bool)
+  func updateClubLabel(with club: GolfTrakSDK.Club)
+  func toggleClubButton(isVisible: Swift.Bool)
+  func drawDetectionRoi(on rect: CoreFoundation.CGRect)
+  func drawBall(on rect: CoreFoundation.CGRect)
+  func setupVideoView(with session: AVFoundation.AVCaptureSession)
+  func showProgressIndicator()
+  func hideProgressIndicator()
+  func startActivity()
+  func stopActivity()
+  func showControls()
+  func hideControls()
+  func showDebugPreview()
+  func updateShotsCount(_ count: Swift.Int)
+  func hideImage()
+  func showImage()
+  func resetUI()
+}
+public enum ObjectScope {
+  case transient
+  case container
+  case viewController
+  public static func == (a: GolfTrakSDK.ObjectScope, b: GolfTrakSDK.ObjectScope) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public protocol IReachabilityServiceListener {
+  func reachabilityChanged()
+}
+public class KeychainService : GolfTrakSDK.IKeychainService {
+  public init()
+  public func add(value: Swift.String, key: GolfTrakSDK.KeychainKey) -> Swift.Bool
+  public func add(bool: Swift.Bool, key: GolfTrakSDK.KeychainKey) -> Swift.Bool
+  public func value(key: GolfTrakSDK.KeychainKey) -> Swift.String?
+  public func remove(key: GolfTrakSDK.KeychainKey) -> Swift.Bool
+  public func clearAll()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class GTSDKDependencyProvider : GolfTrakSDK.IDependenceProvider {
+  public static func loadDependences()
+  public static func mainVC() -> any GolfTrakSDK.ILaunchMonitorView
+  @objc deinit
+}
+public protocol ISocketService : AnyObject {
+  var state: GolfTrakSDK.SocketServiceState { get }
+  func connect()
+  func disconnect()
+  func add(listener: any GolfTrakSDK.ISocketServiceListener)
+  func remove(listener: any GolfTrakSDK.ISocketServiceListener)
+}
+public protocol IStreamObject {
+  var version: Swift.String { get }
+  var body: Any? { get }
+}
+public enum RegistrationErrorType {
+  case accountExist
+  case incorrectEmail
+  case emptySocialID
+  case unknown
+  public static func == (a: GolfTrakSDK.RegistrationErrorType, b: GolfTrakSDK.RegistrationErrorType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum LoginErrorType {
+  case notRegister
+  case incorrectPassword
+  case emptySocialID
+  case passwordOrEmailIsEmpty
+  case unknown
+  public static func == (a: GolfTrakSDK.LoginErrorType, b: GolfTrakSDK.LoginErrorType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum GUAPIError : Swift.Error {
+  case loginServerError(message: Swift.String? = "Unknown Error", type: GolfTrakSDK.LoginErrorType, loginType: Swift.String?)
+  case registrationServerError(message: Swift.String? = "Unknown Error", type: GolfTrakSDK.RegistrationErrorType, loginType: Swift.String?)
+  case registrationError(message: Swift.String, isAccountExist: Swift.Bool)
+  case authorizationError(message: Swift.String? = "Unknown Error")
+  case serializationError
+  case serverError(message: Swift.String? = "Unknown Error", code: Swift.Int? = -1)
+  case appleTokenError(message: Swift.String? = "Unknown Error")
+  case error(message: Swift.String? = "Unknown Error")
+}
+public struct Club {
+}
+public protocol IRequestTask {
+  func resume()
+  func suspend()
+  func cancel()
+  func setDownloadHandler(_ handler: ((Foundation.Progress) -> Swift.Void)?)
+}
+public protocol IGTVideoRectView : UIKit.UIView {
+  var ballRect: CoreFoundation.CGRect { get }
+  var session: AVFoundation.AVCaptureSession? { get set }
+  var currentMode: GolfTrakSDK.ModeItemType { get set }
+  func drawDetectionRoi(on rect: CoreFoundation.CGRect)
+  func drawBall(on rect: CoreFoundation.CGRect)
+  func updateDebugImage(with img: UIKit.UIImage)
+  func hideImage()
+  func showImage()
+  func resetUI()
+}
+public protocol ISocketContextListener : AnyObject {
+  func socketDidReceiveMessage(text: Swift.String)
+  func socketDidReceiveData(data: Foundation.Data)
+}
+public protocol IMonitorStateListener : AnyObject {
+  func monitorStateChanged(state: Swift.String)
+}
+public protocol IDependenceProvider {
+  static func loadDependences()
+}
+@_hasMissingDesignatedInitializers public class SocketService {
+  open var state: GolfTrakSDK.SocketServiceState {
+    get
+  }
+  open func connect()
+  open func disconnect()
+  open func add(listener: any GolfTrakSDK.ISocketServiceListener)
+  open func remove(listener: any GolfTrakSDK.ISocketServiceListener)
+  @objc deinit
+}
+extension GolfTrakSDK.SocketService {
+  public func socketDidConnect()
+  public func socketDidDisconnect(error: Foundation.NSError?)
+  public func socketServiceTryingWriteWhileDisconnect()
+}
+
+public let defaultSocketTimeoutInterval: Swift.Double
+public let defaultHTTPTimeoutInterval: Swift.Double
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var boundsCenter: CoreFoundation.CGPoint {
+    get
+  }
+}
+extension UIKit.UIScreen {
+  @_Concurrency.MainActor(unsafe) public class var hasNotch: Swift.Bool {
+    get
+  }
+}
+
+extension UIKit.UIColor {
+  open func shadeDarker() -> UIKit.UIColor
+}
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func presentImageGallery(_ gallery: GolfTrakSDK.GalleryViewController, completion: (() -> Swift.Void)? = {})
+}
+public typealias ObjectStreamCompletion = ((Swift.Result<Any, GolfTrakSDK.APIError>) -> ())
+public protocol ISocketObjectStreamDelegate : AnyObject {
+  func receiveIfCan(object: any GolfTrakSDK.IStreamObject)
+}
+public enum NVActivityIndicatorType : Swift.CaseIterable {
+  case blank
+  case ballPulse
+  case ballGridPulse
+  case ballClipRotate
+  case squareSpin
+  case ballClipRotatePulse
+  case ballClipRotateMultiple
+  case ballPulseRise
+  case ballRotate
+  case cubeTransition
+  case ballZigZag
+  case ballZigZagDeflect
+  case ballTrianglePath
+  case ballScale
+  case lineScale
+  case lineScaleParty
+  case ballScaleMultiple
+  case ballPulseSync
+  case ballBeat
+  case ballDoubleBounce
+  case lineScalePulseOut
+  case lineScalePulseOutRapid
+  case ballScaleRipple
+  case ballScaleRippleMultiple
+  case ballSpinFadeLoader
+  case lineSpinFadeLoader
+  case triangleSkewSpin
+  case pacman
+  case ballGridBeat
+  case semiCircleSpin
+  case ballRotateChase
+  case orbit
+  case audioEqualizer
+  case circleStrokeSpin
+  public static func == (a: GolfTrakSDK.NVActivityIndicatorType, b: GolfTrakSDK.NVActivityIndicatorType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [GolfTrakSDK.NVActivityIndicatorType]
+  public static var allCases: [GolfTrakSDK.NVActivityIndicatorType] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias FadeInAnimation = (UIKit.UIView) -> Swift.Void
+public typealias FadeOutAnimation = (UIKit.UIView, @escaping () -> Swift.Void) -> Swift.Void
+@objc @_Concurrency.MainActor(unsafe) final public class NVActivityIndicatorView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TYPE: GolfTrakSDK.NVActivityIndicatorType
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreFoundation.CGSize
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreFoundation.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_IN_ANIMATION: (_ view: UIKit.UIView) -> Swift.Void
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_FADE_OUT_ANIMATION: (_ view: UIKit.UIView, _ complete: @escaping () -> Swift.Void) -> Swift.Void
+  @_Concurrency.MainActor(unsafe) final public var type: GolfTrakSDK.NVActivityIndicatorType
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var color: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreFoundation.CGFloat
+  @available(*, deprecated)
+  @_Concurrency.MainActor(unsafe) final public var animating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var isAnimating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, type: GolfTrakSDK.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreFoundation.CGFloat? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreFoundation.CGSize {
+    @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreFoundation.CGRect {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public func startAnimating()
+  @_Concurrency.MainActor(unsafe) final public func stopAnimating()
+  @objc deinit
+}
+public struct StreamEvent : GolfTrakSDK.IStreamEvent {
+  public let type: GolfTrakSDK.StreamEventType
+  public let data: Any?
+  public let timestamp: Swift.Int
+  public init(type: GolfTrakSDK.StreamEventType, data: Any?)
+}
+
+public typealias GalleryConfiguration = [GolfTrakSDK.GalleryConfigurationItem]
+public enum GalleryConfigurationItem {
+  case pagingMode(GolfTrakSDK.GalleryPagingMode)
+  case imageDividerWidth(CoreFoundation.CGFloat)
+  case closeButtonMode(GolfTrakSDK.ButtonMode)
+  case seeAllCloseButtonMode(GolfTrakSDK.ButtonMode)
+  case thumbnailsButtonMode(GolfTrakSDK.ButtonMode)
+  case deleteButtonMode(GolfTrakSDK.ButtonMode)
+  case closeLayout(GolfTrakSDK.ButtonLayout)
+  case seeAllCloseLayout(GolfTrakSDK.ButtonLayout)
+  case thumbnailsLayout(GolfTrakSDK.ButtonLayout)
+  case deleteLayout(GolfTrakSDK.ButtonLayout)
+  case spinnerStyle(UIKit.UIActivityIndicatorView.Style)
+  case spinnerColor(UIKit.UIColor)
+  case headerViewLayout(GolfTrakSDK.HeaderLayout)
+  case footerViewLayout(GolfTrakSDK.FooterLayout)
+  case statusBarHidden(Swift.Bool)
+  case hideDecorationViewsOnLaunch(Swift.Bool)
+  case toggleDecorationViewsBySingleTap(Swift.Bool)
+  case activityViewByLongPress(Swift.Bool)
+  case presentationStyle(GolfTrakSDK.GalleryPresentationStyle)
+  case maximumZoomScale(CoreFoundation.CGFloat)
+  case doubleTapToZoomDuration(Foundation.TimeInterval)
+  case blurPresentDuration(Foundation.TimeInterval)
+  case blurPresentDelay(Foundation.TimeInterval)
+  case colorPresentDuration(Foundation.TimeInterval)
+  case colorPresentDelay(Foundation.TimeInterval)
+  case decorationViewsPresentDelay(Foundation.TimeInterval)
+  case blurDismissDuration(Foundation.TimeInterval)
+  case blurDismissDelay(Foundation.TimeInterval)
+  case colorDismissDuration(Foundation.TimeInterval)
+  case colorDismissDelay(Foundation.TimeInterval)
+  case itemFadeDuration(Foundation.TimeInterval)
+  case decorationViewsFadeDuration(Foundation.TimeInterval)
+  case rotationDuration(Foundation.TimeInterval)
+  case displacementDuration(Foundation.TimeInterval)
+  case reverseDisplacementDuration(Foundation.TimeInterval)
+  case displacementKeepOriginalInPlace(Swift.Bool)
+  case displacementTimingCurve(UIKit.UIView.AnimationCurve)
+  case displacementTransitionStyle(GolfTrakSDK.GalleryDisplacementStyle)
+  case displacementInsetMargin(CoreFoundation.CGFloat)
+  case overlayColor(UIKit.UIColor)
+  case overlayBlurStyle(UIKit.UIBlurEffect.Style)
+  case overlayBlurOpacity(CoreFoundation.CGFloat)
+  case overlayColorOpacity(CoreFoundation.CGFloat)
+  case swipeToDismissThresholdVelocity(CoreFoundation.CGFloat)
+  case swipeToDismissMode(GolfTrakSDK.GallerySwipeToDismissMode)
+  case rotationMode(GolfTrakSDK.GalleryRotationMode)
+  case continuePlayVideoOnEnd(Swift.Bool)
+  case videoAutoPlay(Swift.Bool)
+  case videoControlsColor(UIKit.UIColor)
+}
+public enum GalleryRotationMode {
+  case applicationBased
+  case always
+  public static func == (a: GolfTrakSDK.GalleryRotationMode, b: GolfTrakSDK.GalleryRotationMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ButtonMode {
+  case none
+  case builtIn
+  case custom(UIKit.UIButton)
+}
+public enum GalleryPagingMode {
+  case standard
+  case carousel
+  public static func == (a: GolfTrakSDK.GalleryPagingMode, b: GolfTrakSDK.GalleryPagingMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum GalleryDisplacementStyle {
+  case normal
+  case springBounce(CoreFoundation.CGFloat)
+}
+public enum GalleryPresentationStyle {
+  case fade
+  case displacement
+  public static func == (a: GolfTrakSDK.GalleryPresentationStyle, b: GolfTrakSDK.GalleryPresentationStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct GallerySwipeToDismissMode : Swift.OptionSet {
+  public init(rawValue: Swift.Int)
+  public let rawValue: Swift.Int
+  public static let never: GolfTrakSDK.GallerySwipeToDismissMode
+  public static let horizontal: GolfTrakSDK.GallerySwipeToDismissMode
+  public static let vertical: GolfTrakSDK.GallerySwipeToDismissMode
+  public static let always: GolfTrakSDK.GallerySwipeToDismissMode
+  public typealias ArrayLiteralElement = GolfTrakSDK.GallerySwipeToDismissMode
+  public typealias Element = GolfTrakSDK.GallerySwipeToDismissMode
+  public typealias RawValue = Swift.Int
+}
+extension UIKit.UIImageView : GolfTrakSDK.ItemView {
+}
+public protocol ItemView {
+  var image: UIKit.UIImage? { get set }
+}
+@_Concurrency.MainActor(unsafe) open class ItemBaseController<T> : UIKit.UIViewController, GolfTrakSDK.ItemController, UIKit.UIGestureRecognizerDelegate, UIKit.UIScrollViewDelegate where T : UIKit.UIView, T : GolfTrakSDK.ItemView {
+  @_Concurrency.MainActor(unsafe) public var itemView: T
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any GolfTrakSDK.ItemControllerDelegate)?
+  @_Concurrency.MainActor(unsafe) weak public var displacedViewsDataSource: (any GolfTrakSDK.GalleryDisplacedViewsDataSource)?
+  @_Concurrency.MainActor(unsafe) final public let index: Swift.Int
+  @_Concurrency.MainActor(unsafe) public var isInitialController: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public init(index: Swift.Int, itemCount: Swift.Int, fetchImageBlock: @escaping GolfTrakSDK.FetchImageBlock, configuration: GolfTrakSDK.GalleryConfiguration, isInitialController: Swift.Bool = false)
+  @available(*, unavailable)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) public func fetchImage()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) @objc public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor(unsafe) public func presentItem(alongsideAnimation: () -> Swift.Void, completion: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) public func dismissItem(alongsideAnimation: () -> Swift.Void, completion: @escaping () -> Swift.Void)
+  @_Concurrency.MainActor(unsafe) @objc public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  @_Concurrency.MainActor(unsafe) public func closeDecorationViews(_ duration: Foundation.TimeInterval)
+}
+public typealias ImageCompletion = (UIKit.UIImage?) -> Swift.Void
+public typealias FetchImageBlock = (@escaping GolfTrakSDK.ImageCompletion) -> Swift.Void
+public typealias ItemViewControllerBlock = (_ index: Swift.Int, _ itemCount: Swift.Int, _ fetchImageBlock: (@escaping GolfTrakSDK.ImageCompletion) -> Swift.Void, _ configuration: GolfTrakSDK.GalleryConfiguration, _ isInitialController: Swift.Bool) -> UIKit.UIViewController
+public enum GalleryItem {
+  case image(fetchImageBlock: GolfTrakSDK.FetchImageBlock)
+  case video(fetchPreviewImageBlock: GolfTrakSDK.FetchImageBlock, videoURL: Foundation.URL)
+  case custom(fetchImageBlock: GolfTrakSDK.FetchImageBlock, itemViewControllerBlock: GolfTrakSDK.ItemViewControllerBlock)
+}
+public protocol ItemController : AnyObject {
+  var index: Swift.Int { get }
+  var isInitialController: Swift.Bool { get set }
+  var delegate: (any GolfTrakSDK.ItemControllerDelegate)? { get set }
+  var displacedViewsDataSource: (any GolfTrakSDK.GalleryDisplacedViewsDataSource)? { get set }
+  func fetchImage()
+  func presentItem(alongsideAnimation: () -> Swift.Void, completion: @escaping () -> Swift.Void)
+  func dismissItem(alongsideAnimation: () -> Swift.Void, completion: @escaping () -> Swift.Void)
+  func closeDecorationViews(_ duration: Foundation.TimeInterval)
+}
+public protocol GalleryItemsDelegate : AnyObject {
+  func removeGalleryItem(at index: Swift.Int)
+}
+public protocol ItemControllerDelegate : AnyObject {
+  func itemController(_ controller: any GolfTrakSDK.ItemController, didSwipeToDismissWithDistanceToEdge distance: CoreFoundation.CGFloat)
+  func itemControllerDidFinishSwipeToDismissSuccessfully()
+  func itemControllerDidSingleTap(_ controller: any GolfTrakSDK.ItemController)
+  func itemControllerDidLongPress(_ controller: any GolfTrakSDK.ItemController, in item: any GolfTrakSDK.ItemView)
+  func itemControllerWillAppear(_ controller: any GolfTrakSDK.ItemController)
+  func itemControllerWillDisappear(_ controller: any GolfTrakSDK.ItemController)
+  func itemControllerDidAppear(_ controller: any GolfTrakSDK.ItemController)
+}
+public typealias MarginLeft = CoreFoundation.CGFloat
+public typealias MarginRight = CoreFoundation.CGFloat
+public typealias MarginTop = CoreFoundation.CGFloat
+public typealias MarginBottom = CoreFoundation.CGFloat
+public enum ButtonLayout {
+  case pinLeft(GolfTrakSDK.MarginTop, GolfTrakSDK.MarginLeft)
+  case pinRight(GolfTrakSDK.MarginTop, GolfTrakSDK.MarginRight)
+}
+public enum HeaderLayout {
+  case pinLeft(GolfTrakSDK.MarginTop, GolfTrakSDK.MarginLeft)
+  case pinRight(GolfTrakSDK.MarginTop, GolfTrakSDK.MarginRight)
+  case pinBoth(GolfTrakSDK.MarginTop, GolfTrakSDK.MarginLeft, GolfTrakSDK.MarginRight)
+  case center(GolfTrakSDK.MarginTop)
+}
+public enum FooterLayout {
+  case pinLeft(GolfTrakSDK.MarginBottom, GolfTrakSDK.MarginLeft)
+  case pinRight(GolfTrakSDK.MarginBottom, GolfTrakSDK.MarginRight)
+  case pinBoth(GolfTrakSDK.MarginBottom, GolfTrakSDK.MarginLeft, GolfTrakSDK.MarginRight)
+  case center(GolfTrakSDK.MarginBottom)
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class VideoScrubber : UIKit.UIControl {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func tintColorDidChange()
+}
+public protocol DisplaceableView {
+  var image: UIKit.UIImage? { get }
+  var bounds: CoreFoundation.CGRect { get }
+  var center: CoreFoundation.CGPoint { get }
+  var boundsCenter: CoreFoundation.CGPoint { get }
+  var contentMode: UIKit.UIView.ContentMode { get }
+  var isHidden: Swift.Bool { get set }
+  func convert(_ point: CoreFoundation.CGPoint, to view: UIKit.UIView?) -> CoreFoundation.CGPoint
+}
+public protocol GalleryDisplacedViewsDataSource : AnyObject {
+  func provideDisplacementItem(atIndex index: Swift.Int) -> (any GolfTrakSDK.DisplaceableView)?
+}
+public protocol GalleryItemsDataSource : AnyObject {
+  func itemCount() -> Swift.Int
+  func provideGalleryItem(_ index: Swift.Int) -> GolfTrakSDK.GalleryItem
+}
+@objc @_Concurrency.MainActor(unsafe) open class GalleryViewController : UIKit.UIPageViewController, GolfTrakSDK.ItemControllerDelegate {
+  @_Concurrency.MainActor(unsafe) open var headerView: UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) open var footerView: UIKit.UIView?
+  @_Concurrency.MainActor(unsafe) public var currentIndex: Swift.Int
+  @_Concurrency.MainActor(unsafe) open var launchedCompletion: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var landedPageAtIndexCompletion: ((Swift.Int) -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var closedCompletion: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var programmaticallyClosedCompletion: (() -> Swift.Void)?
+  @_Concurrency.MainActor(unsafe) open var swipedToDismissCompletion: (() -> Swift.Void)?
+  @available(*, unavailable)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(startIndex: Swift.Int, itemsDataSource: any GolfTrakSDK.GalleryItemsDataSource, itemsDelegate: (any GolfTrakSDK.GalleryItemsDelegate)? = nil, displacedViewsDataSource: (any GolfTrakSDK.GalleryDisplacedViewsDataSource)? = nil, configuration: GolfTrakSDK.GalleryConfiguration = [])
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLoad()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func viewDidLayoutSubviews()
+  @_Concurrency.MainActor(unsafe) open func page(toIndex index: Swift.Int)
+  @_Concurrency.MainActor(unsafe) open func reload(atIndex index: Swift.Int)
+  @_Concurrency.MainActor(unsafe) open func close()
+  @_Concurrency.MainActor(unsafe) public func itemControllerWillAppear(_ controller: any GolfTrakSDK.ItemController)
+  @_Concurrency.MainActor(unsafe) public func itemControllerWillDisappear(_ controller: any GolfTrakSDK.ItemController)
+  @_Concurrency.MainActor(unsafe) public func itemControllerDidAppear(_ controller: any GolfTrakSDK.ItemController)
+  @_Concurrency.MainActor(unsafe) open func itemControllerDidSingleTap(_ controller: any GolfTrakSDK.ItemController)
+  @_Concurrency.MainActor(unsafe) open func itemControllerDidLongPress(_ controller: any GolfTrakSDK.ItemController, in item: any GolfTrakSDK.ItemView)
+  @_Concurrency.MainActor(unsafe) public func itemController(_ controller: any GolfTrakSDK.ItemController, didSwipeToDismissWithDistanceToEdge distance: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func itemControllerDidFinishSwipeToDismissSuccessfully()
+}
+public protocol IMonitorModeListener : AnyObject {
+  func monitorModeChanged(mode: Swift.String)
+}
+public enum ModeItemType : Swift.String {
+  case range, indoor, putting, netIndoor, netOutdoor
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum StreamEventCategory : Swift.String {
+  case message
+  case chat
+  case call
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum StreamEventType : Swift.String, Swift.Codable {
+  case Handshake
+  case User
+  case SetTrackingStatusData
+  case PlayerDataModified
+  case SetShotData
+  case CreateSession
+  case StopSession
+  case BallDetection
+  case BallPickup
+  case ShotDetection
+  case UserSimulators
+  case ClientsStatus
+  case Unknown
+  case Error
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class RequestTask : GolfTrakSDK.IRequestTask {
+  open func resume()
+  open func suspend()
+  open func cancel()
+  open func setDownloadHandler(_ handler: ((Foundation.Progress) -> Swift.Void)?)
+  @objc deinit
+}
+extension Alamofire.DataRequest {
+  public func logd() -> Self
+  public func logRequest() -> Self
+  public func logResponse() -> Self
+}
+extension GolfTrakSDK.StreamObjectType : Swift.Equatable {}
+extension GolfTrakSDK.StreamObjectType : Swift.Hashable {}
+extension GolfTrakSDK.StreamObjectType : Swift.RawRepresentable {}
+extension GolfTrakSDK.StreamEventMethod : Swift.Equatable {}
+extension GolfTrakSDK.StreamEventMethod : Swift.Hashable {}
+extension GolfTrakSDK.StreamEventMethod : Swift.RawRepresentable {}
+extension GolfTrakSDK.SocketServiceState : Swift.Equatable {}
+extension GolfTrakSDK.SocketServiceState : Swift.Hashable {}
+extension GolfTrakSDK.UserstoryType : Swift.Equatable {}
+extension GolfTrakSDK.UserstoryType : Swift.Hashable {}
+extension GolfTrakSDK.UserstoryType : Swift.RawRepresentable {}
+extension GolfTrakSDK.KeychainKey : Swift.Equatable {}
+extension GolfTrakSDK.KeychainKey : Swift.Hashable {}
+extension GolfTrakSDK.KeychainKey : Swift.RawRepresentable {}
+extension GolfTrakSDK.ObjectScope : Swift.Equatable {}
+extension GolfTrakSDK.ObjectScope : Swift.Hashable {}
+extension GolfTrakSDK.RegistrationErrorType : Swift.Equatable {}
+extension GolfTrakSDK.RegistrationErrorType : Swift.Hashable {}
+extension GolfTrakSDK.LoginErrorType : Swift.Equatable {}
+extension GolfTrakSDK.LoginErrorType : Swift.Hashable {}
+extension GolfTrakSDK.SocketService : GolfTrakSDK.ISocketService {}
+extension GolfTrakSDK.NVActivityIndicatorType : Swift.Equatable {}
+extension GolfTrakSDK.NVActivityIndicatorType : Swift.Hashable {}
+extension GolfTrakSDK.GalleryRotationMode : Swift.Equatable {}
+extension GolfTrakSDK.GalleryRotationMode : Swift.Hashable {}
+extension GolfTrakSDK.GalleryPagingMode : Swift.Equatable {}
+extension GolfTrakSDK.GalleryPagingMode : Swift.Hashable {}
+extension GolfTrakSDK.GalleryPresentationStyle : Swift.Equatable {}
+extension GolfTrakSDK.GalleryPresentationStyle : Swift.Hashable {}
+extension GolfTrakSDK.ModeItemType : Swift.Equatable {}
+extension GolfTrakSDK.ModeItemType : Swift.Hashable {}
+extension GolfTrakSDK.ModeItemType : Swift.RawRepresentable {}
+extension GolfTrakSDK.StreamEventCategory : Swift.Equatable {}
+extension GolfTrakSDK.StreamEventCategory : Swift.Hashable {}
+extension GolfTrakSDK.StreamEventCategory : Swift.RawRepresentable {}
+extension GolfTrakSDK.StreamEventType : Swift.Equatable {}
+extension GolfTrakSDK.StreamEventType : Swift.Hashable {}
+extension GolfTrakSDK.StreamEventType : Swift.RawRepresentable {}

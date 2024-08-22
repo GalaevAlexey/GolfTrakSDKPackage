@@ -1,0 +1,46 @@
+{
+  "layer_shapes" : {
+    "sequential_3\/dense_15\/Relu" : {
+      "k" : 1,
+      "w" : 64,
+      "n" : 1,
+      "_rank" : 2,
+      "h" : 1
+    },
+    "sequential_3\/dense_18\/Relu" : {
+      "k" : 1,
+      "w" : 16,
+      "n" : 1,
+      "_rank" : 2,
+      "h" : 1
+    },
+    "Identity" : {
+      "k" : 1,
+      "w" : 1,
+      "n" : 1,
+      "_rank" : 2,
+      "h" : 1
+    },
+    "dense_15_input" : {
+      "k" : 1,
+      "w" : 20,
+      "n" : 1,
+      "_rank" : 2,
+      "h" : 1
+    },
+    "sequential_3\/dense_16\/Relu" : {
+      "k" : 1,
+      "w" : 32,
+      "n" : 1,
+      "_rank" : 2,
+      "h" : 1
+    },
+    "sequential_3\/dense_17\/Relu" : {
+      "k" : 1,
+      "w" : 16,
+      "n" : 1,
+      "_rank" : 2,
+      "h" : 1
+    }
+  }
+}

@@ -1,0 +1,11 @@
+framework module GolfTrakSDK {
+  umbrella header "GolfTrakSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module GolfTrakSDK.Swift {
+  header "GolfTrakSDK-Swift.h"
+  requires objc
+}
