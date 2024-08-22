@@ -32,7 +32,7 @@ let package = Package(
         .target(
             name: "GolfTrakSDKPackage",
             dependencies: [
-                .target(name: "GolfTrak"),
+                .target(name: "GolfTrakSDK"),
                 .product(name: "Alamofire", package: "Alamofire"),
                 .product(name: "CocoaLumberjack", package: "CocoaLumberjack"),
                 .product(name: "MBProgressHUD", package: "MBProgressHUD"),
@@ -48,7 +48,7 @@ let package = Package(
                 .product(name: "Crypto", package: "swift-crypto"),
             ]),
         .binaryTarget(
-            name: "GolfTrak",
+            name: "GolfTrakSDK",
             path: "./Sources/GolfTrak.xcframework")
     ]
 )
