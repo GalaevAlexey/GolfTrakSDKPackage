@@ -49,6 +49,6 @@ let package = Package(
             ]),
         .binaryTarget(
             name: "GolfTrakSDK",
-            path: "./Sources/GolfTrak.xcframework")
+            path: "./Sources/GolfTrakSDK.xcframework")
     ]
 )
