@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		4DM3NiAuS1XUHUbuFfwWRp46OCU=
+		dBiwqWZTd0zKEF/tqFTOJPXeFno=
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		YsplHAWk3G2iTGqeLIKhukGaV90=
+		9xh9dhFLziklI/3qSPvYUgfE5rU=
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		YsplHAWk3G2iTGqeLIKhukGaV90=
+		9xh9dhFLziklI/3qSPvYUgfE5rU=
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		S7g0ONXsF2BsTPmPnV+4bq/P1uo=
+		e1BVpxM3QrBZgb4NFF0fsNUjY4Q=
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		4DM3NiAuS1XUHUbuFfwWRp46OCU=
+		dBiwqWZTd0zKEF/tqFTOJPXeFno=
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ZwMukg0JsZyFUk/+WslLBq/OnVU=
+		GYpK8TkFvaFKQN3bdD0DzODj4IE=
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ZwMukg0JsZyFUk/+WslLBq/OnVU=
+		GYpK8TkFvaFKQN3bdD0DzODj4IE=
 		</data>
 		<key>Modules/GolfTrakCV.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		mGUmW8bnraGjnDZLcTOWWXz3YEw=
+		ddSfwzK1kV2I38AJCt01nYtc/3M=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,14 +81,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nX1HQ2VQjRlk+MoQbsKXA8A4wI9VSsgNGoi94n+/2Pc=
+			P5ZJYSuGp4gQuDaEg9vLLCQfYpXYi/K8znt2C4Mfgbw=
 			</data>
 		</dict>
 		<key>Modules/GolfTrakCV.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GhMseiwMj1aILF4oMHCnt8hhfCMJ8QW42K1PnqWMMl8=
+			xQ5EMqRql1G1W6wIBZ/D6ixxiI5t1rJb21+YKsaTGyA=
 			</data>
 		</dict>
 		<key>Modules/GolfTrakCV.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -102,28 +102,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			GhMseiwMj1aILF4oMHCnt8hhfCMJ8QW42K1PnqWMMl8=
+			xQ5EMqRql1G1W6wIBZ/D6ixxiI5t1rJb21+YKsaTGyA=
 			</data>
 		</dict>
 		<key>Modules/GolfTrakCV.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Fw/FyHohW++xZeEkzJKrRcQKzn+VU+6BLy5qaD/lSiY=
+			FOXE7BRnaECfam9OO8gC3Z1c878SL6oR35S+BWi+FJc=
 			</data>
 		</dict>
 		<key>Modules/GolfTrakCV.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nX1HQ2VQjRlk+MoQbsKXA8A4wI9VSsgNGoi94n+/2Pc=
+			P5ZJYSuGp4gQuDaEg9vLLCQfYpXYi/K8znt2C4Mfgbw=
 			</data>
 		</dict>
 		<key>Modules/GolfTrakCV.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CX2VYsTUNHnz520GR3xzCaG1uHqr8ujKHvr5m7FWDa0=
+			tZzbFeD+b+6KvGlq7NupoyRhnnG3Kuqn3AzdZRAeMrA=
 			</data>
 		</dict>
 		<key>Modules/GolfTrakCV.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -137,14 +137,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CX2VYsTUNHnz520GR3xzCaG1uHqr8ujKHvr5m7FWDa0=
+			tZzbFeD+b+6KvGlq7NupoyRhnnG3Kuqn3AzdZRAeMrA=
 			</data>
 		</dict>
 		<key>Modules/GolfTrakCV.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OF5iJ6zX8r5EPsRiSEEKWo//AqjnnC0PifHPM3Hv5tQ=
+			vuhJ7j3Qn4MlaKH1UgAE+uG/o09vSIHWtZaGVLRy1C0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

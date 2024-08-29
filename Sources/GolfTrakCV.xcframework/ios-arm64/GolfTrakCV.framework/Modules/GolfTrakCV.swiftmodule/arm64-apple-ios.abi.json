@@ -16,38 +16,3326 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "OpenCVInteractor",
-        "printedName": "OpenCVInteractor",
+        "name": "IOpenCVInteractor",
+        "printedName": "IOpenCVInteractor",
         "children": [
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
+            "kind": "Function",
+            "name": "clearDebugImages",
+            "printedName": "clearDebugImages()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "OpenCVInteractor",
-                "printedName": "GolfTrakCV.OpenCVInteractor",
-                "usr": "s:10GolfTrakCV16OpenCVInteractorC"
+                "name": "Void",
+                "printedName": "()"
               }
             ],
-            "declKind": "Constructor",
-            "usr": "s:10GolfTrakCV16OpenCVInteractorCACycfc",
-            "mangledName": "$s10GolfTrakCV16OpenCVInteractorCACycfc",
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP16clearDebugImagesyyF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP16clearDebugImagesyyF",
             "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
             "declAttributes": [
-              "AccessControl"
+              "RawDocComment"
             ],
-            "init_kind": "Designated"
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "readCounter",
+            "printedName": "readCounter()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP11readCounterSiyF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP11readCounterSiyF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "incrementBinaryCounter",
+            "printedName": "incrementBinaryCounter()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP22incrementBinaryCounteryyF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP22incrementBinaryCounteryyF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "decrementBinaryCounter",
+            "printedName": "decrementBinaryCounter()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP22decrementBinaryCounteryyF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP22decrementBinaryCounteryyF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "checkBlobSize",
+            "printedName": "checkBlobSize(images:hitIndex:hitPoint:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIImage]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIImage]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP13checkBlobSize6images8hitIndex0J5PointSdSaySo7UIImageCGSg_SiSo7CGPointVtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP13checkBlobSize6images8hitIndex0J5PointSdSaySo7UIImageCGSg_SiSo7CGPointVtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "processClubPath",
+            "printedName": "processClubPath(shotFrame:frames:initPosition:radius:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIImage]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIImage]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP15processClubPath9shotFrame6frames12initPosition6radiusySi_SaySo7UIImageCGSgSo7CGPointVSitF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP15processClubPath9shotFrame6frames12initPosition6radiusySi_SaySo7UIImageCGSgSo7CGPointVSitF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "clubPath",
+            "printedName": "clubPath(frames:initPosition:radius:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIImage]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIImage]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP8clubPath6frames12initPosition6radius5indexySaySo7UIImageCGSg_So7CGPointVS2itF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP8clubPath6frames12initPosition6radius5indexySaySo7UIImageCGSg_So7CGPointVS2itF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "preprocessPut",
+            "printedName": "preprocessPut(images:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIImage]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIImage]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP13preprocessPut6imagesSayypGSgSaySo7UIImageCGSg_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP13preprocessPut6imagesSayypGSgSaySo7UIImageCGSg_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "preprocess",
+            "printedName": "preprocess(images:isNet:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIImage]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIImage]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP10preprocess6images5isNetSayypGSgSaySo7UIImageCGSg_SbtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP10preprocess6images5isNetSayypGSgSaySo7UIImageCGSg_SbtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "postprocessPut",
+            "printedName": "postprocessPut(images:index:roi:input:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreML.MLMultiArray?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MLMultiArray",
+                    "printedName": "CoreML.MLMultiArray",
+                    "usr": "c:objc(cs)MLMultiArray"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP14postprocessPut6images5index3roi5inputSo7UIImageCSgSo12MLMultiArrayCSg_SiSo6CGRectVAKtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP14postprocessPut6images5index3roi5inputSo7UIImageCSgSo12MLMultiArrayCSg_SiSo6CGRectVAKtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "preprocessFlightPath",
+            "printedName": "preprocessFlightPath(images:isReversed:requiredBalls:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIImage]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIImage]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP20preprocessFlightPath6images10isReversed13requiredBalls5indexySaySo7UIImageCGSg_SbS2itF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP20preprocessFlightPath6images10isReversed13requiredBalls5indexySaySo7UIImageCGSg_SbS2itF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateRoisForUI",
+            "printedName": "updateRoisForUI()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP15updateRoisForUIyyF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP15updateRoisForUIyyF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "postprocess",
+            "printedName": "postprocess(images:index:roi:input:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreML.MLMultiArray?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MLMultiArray",
+                    "printedName": "CoreML.MLMultiArray",
+                    "usr": "c:objc(cs)MLMultiArray"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP11postprocess6images5index3roi5inputSo7UIImageCSgSo12MLMultiArrayCSg_SiSo6CGRectVAKtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP11postprocess6images5index3roi5inputSo7UIImageCSgSo12MLMultiArrayCSg_SiSo6CGRectVAKtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "postprocessClubImpact",
+            "printedName": "postprocessClubImpact(images:index:center:radius:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreML.MLMultiArray?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MLMultiArray",
+                    "printedName": "CoreML.MLMultiArray",
+                    "usr": "c:objc(cs)MLMultiArray"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP21postprocessClubImpact6images5index6center6radiusSo7UIImageCSgSo12MLMultiArrayCSg_SiSo7CGPointVSitF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP21postprocessClubImpact6images5index6center6radiusSo7UIImageCSgSo12MLMultiArrayCSg_SiSo7CGPointVSitF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "postprocessFlightPath",
+            "printedName": "postprocessFlightPath(multiArray:index:isReversed:requiredBalls:roi:extraGap:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreML.MLMultiArray?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MLMultiArray",
+                    "printedName": "CoreML.MLMultiArray",
+                    "usr": "c:objc(cs)MLMultiArray"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP21postprocessFlightPath10multiArray5index10isReversed13requiredBalls3roi8extraGapySo07MLMultiJ0CSg_SiSbSiSo6CGRectVSitF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP21postprocessFlightPath10multiArray5index10isReversed13requiredBalls3roi8extraGapySo07MLMultiJ0CSg_SiSbSiSo6CGRectVSitF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "processImages",
+            "printedName": "processImages(images:position:tilt:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIImage]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIImage]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP13processImages6images8position4tiltySaySo7UIImageCGSg_So7CGPointVSdtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP13processImages6images8position4tiltySaySo7UIImageCGSg_So7CGPointVSdtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "loadDebugImages",
+            "printedName": "loadDebugImages(buffers:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP15loadDebugImages7buffersySayypGSg_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP15loadDebugImages7buffersySayypGSg_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stop",
+            "printedName": "stop()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP4stopyyF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP4stopyyF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prepareBallBg",
+            "printedName": "prepareBallBg(buffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreVideo.CVBuffer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CVBuffer",
+                    "printedName": "CoreVideo.CVBuffer",
+                    "usr": "c:@T@CVBufferRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP13prepareBallBg6bufferySo11CVBufferRefaSg_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP13prepareBallBg6bufferySo11CVBufferRefaSg_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateExposure",
+            "printedName": "updateExposure(exp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP14updateExposure3expySd_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP14updateExposure3expySd_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawCircle",
+            "printedName": "drawCircle(on:rect:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP10drawCircle2on4rectSo7UIImageCSgAI_So6CGRectVtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP10drawCircle2on4rectSo7UIImageCSgAI_So6CGRectVtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateShotDetectionRect",
+            "printedName": "updateShotDetectionRect(rect:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP23updateShotDetectionRect4rectSbSo6CGRectV_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP23updateShotDetectionRect4rectSbSo6CGRectV_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "saveStaticBall",
+            "printedName": "saveStaticBall(image:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP14saveStaticBall5imageySo7UIImageCSg_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP14saveStaticBall5imageySo7UIImageCSg_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "saveStaticBall2x",
+            "printedName": "saveStaticBall2x(image:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP16saveStaticBall2x5imageySo7UIImageCSg_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP16saveStaticBall2x5imageySo7UIImageCSg_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "staticParameters",
+            "printedName": "staticParameters(image:radius:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP16staticParameters5image6radiusySo7UIImageCSg_SitF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP16staticParameters5image6radiusySo7UIImageCSg_SitF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawPoint",
+            "printedName": "drawPoint(on:point:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGPoint",
+                "printedName": "CoreFoundation.CGPoint",
+                "usr": "c:@S@CGPoint"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP9drawPoint2on5pointSo7UIImageCSgAI_So7CGPointVtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP9drawPoint2on5pointSo7UIImageCSgAI_So7CGPointVtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "detectShotM",
+            "printedName": "detectShotM(array:d:imageToCheck:timestamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreML.MLMultiArray?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MLMultiArray",
+                    "printedName": "CoreML.MLMultiArray",
+                    "usr": "c:objc(cs)MLMultiArray"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP11detectShotM5array1d12imageToCheck9timestampSo7UIImageCSgSo12MLMultiArrayCSg_SiAKSdtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP11detectShotM5array1d12imageToCheck9timestampSo7UIImageCSgSo12MLMultiArrayCSg_SiAKSdtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "convertBufferToMat",
+            "printedName": "convertBufferToMat(buffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreVideo.CVBuffer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CVBuffer",
+                    "printedName": "CoreVideo.CVBuffer",
+                    "usr": "c:@T@CVBufferRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP18convertBufferToMat6bufferySo11CVBufferRefaSg_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP18convertBufferToMat6bufferySo11CVBufferRefaSg_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prepareTrackBall",
+            "printedName": "prepareTrackBall(buffer:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "CoreVideo.CVBuffer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CVBuffer",
+                    "printedName": "CoreVideo.CVBuffer",
+                    "usr": "c:@T@CVBufferRef"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP16prepareTrackBall6bufferySo11CVBufferRefaSg_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP16prepareTrackBall6bufferySo11CVBufferRefaSg_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "debugRoi",
+            "printedName": "debugRoi(image:rect:init:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP8debugRoi5image4rect4initSo7UIImageCSgAJ_So6CGRectVSbtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP8debugRoi5image4rect4initSo7UIImageCSgAJ_So6CGRectVSbtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "absDiff",
+            "printedName": "absDiff(bg:images:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[UIKit.UIImage]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[UIKit.UIImage]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIImage",
+                        "printedName": "UIKit.UIImage",
+                        "usr": "c:objc(cs)UIImage"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP7absDiff2bg6imagesSiSo7UIImageCSg_SayAHGSgtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP7absDiff2bg6imagesSiSo7UIImageCSg_SayAHGSgtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "roiRectImage",
+            "printedName": "roiRectImage(rect:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP12roiRectImage4rect5indexSo7UIImageCSgSo6CGRectV_SitF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP12roiRectImage4rect5indexSo7UIImageCSgSo6CGRectV_SitF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "roiRectMatToServer",
+            "printedName": "roiRectMatToServer(bg:rect:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP18roiRectMatToServer2bg4rect5index10Foundation4DataVSgSo7UIImageCSg_So6CGRectVSitF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP18roiRectMatToServer2bg4rect5index10Foundation4DataVSgSo7UIImageCSg_So6CGRectVSitF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "roiRectImageToServer",
+            "printedName": "roiRectImageToServer(bg:rect:index:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP20roiRectImageToServer2bg4rect5index10Foundation4DataVSgSo7UIImageCSg_So6CGRectVSitF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP20roiRectImageToServer2bg4rect5index10Foundation4DataVSgSo7UIImageCSg_So6CGRectVSitF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getRoiRects",
+            "printedName": "getRoiRects(index:initial:optimized:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP11getRoiRects5index7initial9optimizedSayypGSgSi_So6CGRectVAKtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP11getRoiRects5index7initial9optimizedSayypGSgSi_So6CGRectVAKtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCircle",
+            "printedName": "getCircle(index:roiImg:angle:initImg:rect:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "GolfTrakCV.GTCircle?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GTCircle",
+                    "printedName": "GolfTrakCV.GTCircle",
+                    "usr": "c:objc(cs)GTCircle"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP9getCircle5index6roiImg5angle04initJ04rectSo8GTCircleCSgSi_So7UIImageCSgSdAOSo6CGRectVtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP9getCircle5index6roiImg5angle04initJ04rectSo8GTCircleCSgSi_So7UIImageCSgSdAOSo6CGRectVtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "testData",
+            "printedName": "testData(data:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Data?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Data",
+                    "printedName": "Foundation.Data",
+                    "usr": "s:10Foundation4DataV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP8testData4dataSo7UIImageCSg10Foundation0G0VSg_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP8testData4dataSo7UIImageCSg10Foundation0G0VSg_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "drawSoundMarker",
+            "printedName": "drawSoundMarker(on:hitFrame:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP15drawSoundMarker2on8hitFrameSo7UIImageCSgAI_SbtF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP15drawSoundMarker2on8hitFrameSo7UIImageCSgAI_SbtF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setMode",
+            "printedName": "setMode(mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP7setMode4modeySi_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP7setMode4modeySi_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "updateHandedness",
+            "printedName": "updateHandedness(handedness:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP16updateHandedness10handednessySi_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP16updateHandedness10handednessySi_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resizedImage",
+            "printedName": "resizedImage(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP12resizedImage4fromSo7UIImageCSgAH_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP12resizedImage4fromSo7UIImageCSgAH_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resizedUPImage",
+            "printedName": "resizedUPImage(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIImage?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIImage",
+                    "printedName": "UIKit.UIImage",
+                    "usr": "c:objc(cs)UIImage"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP14resizedUPImage4fromSo7UIImageCSgAH_tF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP14resizedUPImage4fromSo7UIImageCSgAH_tF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLogCallback",
+            "printedName": "setLogCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.String?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "Swift.String?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP14setLogCallbackyyySSSgcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP14setLogCallbackyyySSSgcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setNonZeroBGCallback",
+            "printedName": "setNonZeroBGCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Double) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP20setNonZeroBGCallbackyyySdcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP20setNonZeroBGCallbackyyySdcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setBgThresholdCallback",
+            "printedName": "setBgThresholdCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Double) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP22setBgThresholdCallbackyyySdcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP22setBgThresholdCallbackyyySdcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setFpsCountCallback",
+            "printedName": "setFpsCountCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP19setFpsCountCallbackyyyycSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP19setFpsCountCallbackyyyycSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setOnlyBGCallback",
+            "printedName": "setOnlyBGCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Double) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP17setOnlyBGCallbackyyySdcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP17setOnlyBGCallbackyyySdcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setBallBGCallback",
+            "printedName": "setBallBGCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Double) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP17setBallBGCallbackyyySdcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP17setBallBGCallbackyyySdcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setNonZeroBallBGCallback",
+            "printedName": "setNonZeroBallBGCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Double) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP24setNonZeroBallBGCallbackyyySdcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP24setNonZeroBallBGCallbackyyySdcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPredictCPCallback",
+            "printedName": "setPredictCPCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP20setPredictCPCallbackyyySicSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP20setPredictCPCallbackyyySicSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setCpImageCallback",
+            "printedName": "setCpImageCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UIImage?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIImage?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "UIKit.UIImage?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "UIImage",
+                            "printedName": "UIKit.UIImage",
+                            "usr": "c:objc(cs)UIImage"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP18setCpImageCallbackyyySo7UIImageCSgcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP18setCpImageCallbackyyySo7UIImageCSgcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPredictSHCallback",
+            "printedName": "setPredictSHCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Int, CoreFoundation.CGPoint, Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, CoreFoundation.CGPoint, Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Int, CoreFoundation.CGPoint, Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGPoint",
+                            "printedName": "CoreFoundation.CGPoint",
+                            "usr": "c:@S@CGPoint"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP20setPredictSHCallbackyyySi_So7CGPointVSitcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP20setPredictSHCallbackyyySi_So7CGPointVSitcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPredictBRCallback",
+            "printedName": "setPredictBRCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Int, CoreFoundation.CGPoint) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, CoreFoundation.CGPoint) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Int, CoreFoundation.CGPoint)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CGPoint",
+                            "printedName": "CoreFoundation.CGPoint",
+                            "usr": "c:@S@CGPoint"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP20setPredictBRCallbackyyySi_So7CGPointVtcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP20setPredictBRCallbackyyySi_So7CGPointVtcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPredictCHCallback",
+            "printedName": "setPredictCHCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Int, Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Int, Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Int, Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP20setPredictCHCallbackyyySi_SitcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP20setPredictCHCallbackyyySi_SitcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setBallPointsCallback",
+            "printedName": "setBallPointsCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(([Any]?, [Swift.AnyHashable : Any]?, Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "([Any]?, [Swift.AnyHashable : Any]?, Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "([Any]?, [Swift.AnyHashable : Any]?, Swift.Bool)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "[Any]?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Array",
+                                "printedName": "[Any]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProtocolComposition",
+                                    "printedName": "Any"
+                                  }
+                                ],
+                                "usr": "s:Sa"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "[Swift.AnyHashable : Any]?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "Dictionary",
+                                "printedName": "[Swift.AnyHashable : Any]",
+                                "children": [
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "AnyHashable",
+                                    "printedName": "Swift.AnyHashable",
+                                    "usr": "s:s11AnyHashableV"
+                                  },
+                                  {
+                                    "kind": "TypeNominal",
+                                    "name": "ProtocolComposition",
+                                    "printedName": "Any"
+                                  }
+                                ],
+                                "usr": "s:SD"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP21setBallPointsCallbackyyySayypGSg_SDys11AnyHashableVypGSgSbtcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP21setBallPointsCallbackyyySayypGSg_SDys11AnyHashableVypGSgSbtcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPredictCallback",
+            "printedName": "setPredictCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UIImage?, Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIImage?, Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(UIKit.UIImage?, Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "UIKit.UIImage?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UIImage",
+                                "printedName": "UIKit.UIImage",
+                                "usr": "c:objc(cs)UIImage"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP18setPredictCallbackyyySo7UIImageCSg_SitcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP18setPredictCallbackyyySo7UIImageCSg_SitcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPredictBinCallback",
+            "printedName": "setPredictBinCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UIImage?, UIKit.UIImage?, Swift.Int, Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIImage?, UIKit.UIImage?, Swift.Int, Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(UIKit.UIImage?, UIKit.UIImage?, Swift.Int, Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "UIKit.UIImage?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UIImage",
+                                "printedName": "UIKit.UIImage",
+                                "usr": "c:objc(cs)UIImage"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "UIKit.UIImage?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UIImage",
+                                "printedName": "UIKit.UIImage",
+                                "usr": "c:objc(cs)UIImage"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP21setPredictBinCallbackyyySo7UIImageCSg_AGS2itcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP21setPredictBinCallbackyyySo7UIImageCSg_AGS2itcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPredictFlightPathCallback",
+            "printedName": "setPredictFlightPathCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((UIKit.UIImage?, Swift.Int, Swift.Bool, Swift.Int) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(UIKit.UIImage?, Swift.Int, Swift.Bool, Swift.Int) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(UIKit.UIImage?, Swift.Int, Swift.Bool, Swift.Int)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "UIKit.UIImage?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UIImage",
+                                "printedName": "UIKit.UIImage",
+                                "usr": "c:objc(cs)UIImage"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Bool",
+                            "printedName": "Swift.Bool",
+                            "usr": "s:Sb"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Int",
+                            "printedName": "Swift.Int",
+                            "usr": "s:Si"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP28setPredictFlightPathCallbackyyySo7UIImageCSg_SiSbSitcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP28setPredictFlightPathCallbackyyySo7UIImageCSg_SiSbSitcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setShowModelErrorCallback",
+            "printedName": "setShowModelErrorCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP25setShowModelErrorCallbackyyyycSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP25setShowModelErrorCallbackyyyycSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUpdateInitRectCallback",
+            "printedName": "setUpdateInitRectCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((CoreFoundation.CGRect) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreFoundation.CGRect) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGRect",
+                        "printedName": "CoreFoundation.CGRect",
+                        "usr": "c:@S@CGRect"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP25setUpdateInitRectCallbackyyySo6CGRectVcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP25setUpdateInitRectCallbackyyySo6CGRectVcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUpdateCropRectCallback",
+            "printedName": "setUpdateCropRectCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((CoreFoundation.CGRect) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreFoundation.CGRect) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGRect",
+                        "printedName": "CoreFoundation.CGRect",
+                        "usr": "c:@S@CGRect"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP25setUpdateCropRectCallbackyyySo6CGRectVcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP25setUpdateCropRectCallbackyyySo6CGRectVcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUpdateCropMlRectCallback",
+            "printedName": "setUpdateCropMlRectCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((CoreFoundation.CGRect) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreFoundation.CGRect) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGRect",
+                        "printedName": "CoreFoundation.CGRect",
+                        "usr": "c:@S@CGRect"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP27setUpdateCropMlRectCallbackyyySo6CGRectVcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP27setUpdateCropMlRectCallbackyyySo6CGRectVcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setUpdateInitPositionCallback",
+            "printedName": "setUpdateInitPositionCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((CoreFoundation.CGRect) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(CoreFoundation.CGRect) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CGRect",
+                        "printedName": "CoreFoundation.CGRect",
+                        "usr": "c:@S@CGRect"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP29setUpdateInitPositionCallbackyyySo6CGRectVcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP29setUpdateInitPositionCallbackyyySo6CGRectVcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setClearBallPositionCallback",
+            "printedName": "setClearBallPositionCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP28setClearBallPositionCallbackyyyycSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP28setClearBallPositionCallbackyyyycSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setShotDetectedCallback",
+            "printedName": "setShotDetectedCallback(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Float, UIKit.UIImage?) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Float, UIKit.UIImage?) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.Float, UIKit.UIImage?)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Float",
+                            "printedName": "Swift.Float",
+                            "usr": "s:Sf"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Optional",
+                            "printedName": "UIKit.UIImage?",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "UIImage",
+                                "printedName": "UIKit.UIImage",
+                                "usr": "c:objc(cs)UIImage"
+                              }
+                            ],
+                            "usr": "s:Sq"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10GolfTrakCV17IOpenCVInteractorP23setShotDetectedCallbackyyySf_So7UIImageCSgtcSgF",
+            "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP23setShotDetectedCallbackyyySf_So7UIImageCSgtcSgF",
+            "moduleName": "GolfTrakCV",
+            "genericSig": "<τ_0_0 where τ_0_0 : GolfTrakCV.IOpenCVInteractor>",
+            "sugared_genericSig": "<Self where Self : GolfTrakCV.IOpenCVInteractor>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
-        "declKind": "Class",
-        "usr": "s:10GolfTrakCV16OpenCVInteractorC",
-        "mangledName": "$s10GolfTrakCV16OpenCVInteractorC",
+        "declKind": "Protocol",
+        "usr": "s:10GolfTrakCV17IOpenCVInteractorP",
+        "mangledName": "$s10GolfTrakCV17IOpenCVInteractorP",
         "moduleName": "GolfTrakCV",
         "declAttributes": [
           "AccessControl"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GolfTrakCV",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GolfTrakCV"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMedia",
+        "printedName": "CoreMedia",
+        "declKind": "Import",
+        "moduleName": "GolfTrakCV"
+      },
+      {
+        "kind": "Import",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
+        "declKind": "Import",
+        "moduleName": "GolfTrakCV"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreVideo",
+        "printedName": "CoreVideo",
+        "declKind": "Import",
+        "moduleName": "GolfTrakCV"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreML",
+        "printedName": "CoreML",
+        "declKind": "Import",
+        "moduleName": "GolfTrakCV"
       }
     ],
     "json_format_version": 8

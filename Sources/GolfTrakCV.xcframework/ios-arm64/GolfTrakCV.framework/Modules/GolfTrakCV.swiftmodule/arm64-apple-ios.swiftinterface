@@ -1,13 +1,86 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
 // swift-module-flags: -target arm64-apple-ios15.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name GolfTrakCV
+import AVFoundation
+import CoreML
+import CoreMedia
+import CoreVideo
 import Foundation
 @_exported import GolfTrakCV
 import Swift
+import UIKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
-public class OpenCVInteractor {
-  public init()
-  @objc deinit
+public protocol IOpenCVInteractor {
+  func clearDebugImages()
+  func readCounter() -> Swift.Int
+  func incrementBinaryCounter()
+  func decrementBinaryCounter()
+  func checkBlobSize(images: [UIKit.UIImage]?, hitIndex: Swift.Int, hitPoint: CoreFoundation.CGPoint) -> Swift.Double
+  func processClubPath(shotFrame: Swift.Int, frames: [UIKit.UIImage]?, initPosition: CoreFoundation.CGPoint, radius: Swift.Int)
+  func clubPath(frames: [UIKit.UIImage]?, initPosition: CoreFoundation.CGPoint, radius: Swift.Int, index: Swift.Int)
+  @discardableResult
+  func preprocessPut(images: [UIKit.UIImage]?) -> [Any]?
+  @discardableResult
+  func preprocess(images: [UIKit.UIImage]?, isNet: Swift.Bool) -> [Any]?
+  @discardableResult
+  func postprocessPut(images: CoreML.MLMultiArray?, index: Swift.Int, roi: CoreFoundation.CGRect, input: UIKit.UIImage?) -> UIKit.UIImage?
+  func preprocessFlightPath(images: [UIKit.UIImage]?, isReversed: Swift.Bool, requiredBalls: Swift.Int, index: Swift.Int)
+  func updateRoisForUI()
+  @discardableResult
+  func postprocess(images: CoreML.MLMultiArray?, index: Swift.Int, roi: CoreFoundation.CGRect, input: UIKit.UIImage?) -> UIKit.UIImage?
+  func postprocessClubImpact(images: CoreML.MLMultiArray?, index: Swift.Int, center: CoreFoundation.CGPoint, radius: Swift.Int) -> UIKit.UIImage?
+  func postprocessFlightPath(multiArray: CoreML.MLMultiArray?, index: Swift.Int, isReversed: Swift.Bool, requiredBalls: Swift.Int, roi: CoreFoundation.CGRect, extraGap: Swift.Int)
+  func processImages(images: [UIKit.UIImage]?, position: CoreFoundation.CGPoint, tilt: Swift.Double)
+  func loadDebugImages(buffers: [Any]?)
+  func stop()
+  func prepareBallBg(buffer: CoreVideo.CVPixelBuffer?)
+  func updateExposure(exp: Swift.Double)
+  func drawCircle(on image: UIKit.UIImage?, rect: CoreFoundation.CGRect) -> UIKit.UIImage?
+  func updateShotDetectionRect(rect: CoreFoundation.CGRect) -> Swift.Bool
+  func saveStaticBall(image: UIKit.UIImage?)
+  func saveStaticBall2x(image: UIKit.UIImage?)
+  func staticParameters(image: UIKit.UIImage?, radius: Swift.Int)
+  func drawPoint(on image: UIKit.UIImage?, point: CoreFoundation.CGPoint) -> UIKit.UIImage?
+  @discardableResult
+  func detectShotM(array: CoreML.MLMultiArray?, d: Swift.Int, imageToCheck: UIKit.UIImage?, timestamp: Swift.Double) -> UIKit.UIImage?
+  func convertBufferToMat(buffer: CoreVideo.CVPixelBuffer?)
+  func prepareTrackBall(buffer: CoreVideo.CVPixelBuffer?)
+  func debugRoi(image: UIKit.UIImage?, rect: CoreFoundation.CGRect, init: Swift.Bool) -> UIKit.UIImage?
+  func absDiff(bg: UIKit.UIImage?, images: [UIKit.UIImage]?) -> Swift.Int
+  func roiRectImage(rect: CoreFoundation.CGRect, index: Swift.Int) -> UIKit.UIImage?
+  func roiRectMatToServer(bg: UIKit.UIImage?, rect: CoreFoundation.CGRect, index: Swift.Int) -> Foundation.Data?
+  func roiRectImageToServer(bg: UIKit.UIImage?, rect: CoreFoundation.CGRect, index: Swift.Int) -> Foundation.Data?
+  func getRoiRects(index: Swift.Int, initial: CoreFoundation.CGRect, optimized: CoreFoundation.CGRect) -> [Any]?
+  func getCircle(index: Swift.Int, roiImg: UIKit.UIImage?, angle: Swift.Double, initImg: UIKit.UIImage?, rect: CoreFoundation.CGRect) -> GolfTrakCV.GTCircle?
+  func testData(data: Foundation.Data?) -> UIKit.UIImage?
+  func drawSoundMarker(on image: UIKit.UIImage?, hitFrame: Swift.Bool) -> UIKit.UIImage?
+  func setMode(mode: Swift.Int)
+  func updateHandedness(handedness: Swift.Int)
+  func resizedImage(from image: UIKit.UIImage?) -> UIKit.UIImage?
+  func resizedUPImage(from image: UIKit.UIImage?) -> UIKit.UIImage?
+  func setLogCallback(_ callback: ((Swift.String?) -> Swift.Void)?)
+  func setNonZeroBGCallback(_ callback: ((Swift.Double) -> Swift.Void)?)
+  func setBgThresholdCallback(_ callback: ((Swift.Double) -> Swift.Void)?)
+  func setFpsCountCallback(_ callback: (() -> Swift.Void)?)
+  func setOnlyBGCallback(_ callback: ((Swift.Double) -> Swift.Void)?)
+  func setBallBGCallback(_ callback: ((Swift.Double) -> Swift.Void)?)
+  func setNonZeroBallBGCallback(_ callback: ((Swift.Double) -> Swift.Void)?)
+  func setPredictCPCallback(_ callback: ((Swift.Int) -> Swift.Void)?)
+  func setCpImageCallback(_ callback: ((UIKit.UIImage?) -> Swift.Void)?)
+  func setPredictSHCallback(_ callback: ((Swift.Int, CoreFoundation.CGPoint, Swift.Int) -> Swift.Void)?)
+  func setPredictBRCallback(_ callback: ((Swift.Int, CoreFoundation.CGPoint) -> Swift.Void)?)
+  func setPredictCHCallback(_ callback: ((Swift.Int, Swift.Int) -> Swift.Void)?)
+  func setBallPointsCallback(_ callback: (([Any]?, [Swift.AnyHashable : Any]?, Swift.Bool) -> Swift.Void)?)
+  func setPredictCallback(_ callback: ((UIKit.UIImage?, Swift.Int) -> Swift.Void)?)
+  func setPredictBinCallback(_ callback: ((UIKit.UIImage?, UIKit.UIImage?, Swift.Int, Swift.Int) -> Swift.Void)?)
+  func setPredictFlightPathCallback(_ callback: ((UIKit.UIImage?, Swift.Int, Swift.Bool, Swift.Int) -> Swift.Void)?)
+  func setShowModelErrorCallback(_ callback: (() -> Swift.Void)?)
+  func setUpdateInitRectCallback(_ callback: ((CoreFoundation.CGRect) -> Swift.Void)?)
+  func setUpdateCropRectCallback(_ callback: ((CoreFoundation.CGRect) -> Swift.Void)?)
+  func setUpdateCropMlRectCallback(_ callback: ((CoreFoundation.CGRect) -> Swift.Void)?)
+  func setUpdateInitPositionCallback(_ callback: ((CoreFoundation.CGRect) -> Swift.Void)?)
+  func setClearBallPositionCallback(_ callback: (() -> Swift.Void)?)
+  func setShotDetectedCallback(_ callback: ((Swift.Float, UIKit.UIImage?) -> Swift.Void)?)
 }
