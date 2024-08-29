@@ -1,0 +1,56 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GolfTrakCV",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "OpenCVInteractor",
+        "printedName": "OpenCVInteractor",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "OpenCVInteractor",
+                "printedName": "GolfTrakCV.OpenCVInteractor",
+                "usr": "s:10GolfTrakCV16OpenCVInteractorC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10GolfTrakCV16OpenCVInteractorCACycfc",
+            "mangledName": "$s10GolfTrakCV16OpenCVInteractorCACycfc",
+            "moduleName": "GolfTrakCV",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10GolfTrakCV16OpenCVInteractorC",
+        "mangledName": "$s10GolfTrakCV16OpenCVInteractorC",
+        "moduleName": "GolfTrakCV",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}

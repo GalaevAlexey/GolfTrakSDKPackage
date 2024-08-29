@@ -1,0 +1,11 @@
+framework module GolfTrakCV {
+  umbrella header "GolfTrakCV.h"
+  export *
+
+  module * { export * }
+}
+
+module GolfTrakCV.Swift {
+  header "GolfTrakCV-Swift.h"
+  requires objc
+}
